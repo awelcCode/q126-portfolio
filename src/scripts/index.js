@@ -16,19 +16,19 @@ const projectData = {
   1: {
     title: "Product Page Redesign, Rejuvenation",
     theme: "theme-plum",
-    link: "#",
-    posterImage: "images/project1-fallback.jpg",
+    link: "/buyBox",
+    posterImage: "images/project1-fallback.jpg", // Background image for all browsers
   },
   2: {
     title: "Circuit Coffee Logo Animation",
     theme: "theme-ocean",
-    link: "#",
+    link: "https://www.youtube.com/watch?v=HmW7Dp1DpMk",
     posterImage: "images/project2-fallback.jpg",
   },
   3: {
     title: "Project Collective",
     theme: "theme-tan",
-    link: "#",
+    link: "/projectCollective",
     posterImage: "images/project3-fallback.jpg",
   },
 };
@@ -37,9 +37,6 @@ const players = {};
 
 // Detect Safari
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-// Detect mobile (900px or less)
-const isMobile = () => window.innerWidth <= 900;
 
 // 1. Setup background images for ALL browsers
 const setupBackgroundImages = () => {
@@ -50,10 +47,12 @@ const setupBackgroundImages = () => {
     const container = slot.querySelector("div[style*='padding']");
     if (!container) return;
 
+    // Set container background image via CSS (cleaner approach)
     container.style.backgroundImage = `url(${data.posterImage})`;
     container.style.backgroundSize = "cover";
     container.style.backgroundPosition = "center";
 
+    // For Safari, hide the iframe completely
     if (isSafari) {
       const iframe = slot.querySelector("iframe");
       if (iframe) {
@@ -63,10 +62,10 @@ const setupBackgroundImages = () => {
   });
 };
 
-// 2. Initialize Players (skip for Safari or mobile)
+// 2. Initialize Players (skip for Safari)
 const initPlayers = () => {
-  if (isSafari || isMobile()) {
-    console.log("Safari or mobile detected - using static images");
+  if (isSafari) {
+    console.log("Safari detected - using static images instead of videos");
     return;
   }
 
@@ -86,9 +85,6 @@ const switchToProject = (id) => {
   const data = projectData[id];
   if (!data) return;
 
-  // Skip switching on mobile - all cards are visible
-  if (isMobile()) return;
-
   // Update Theme & Text
   stickyView.className = `sticky-view ${data.theme}`;
   titleEl.textContent = data.title;
@@ -99,6 +95,7 @@ const switchToProject = (id) => {
     if (slotId === id) {
       slots[slotId].classList.add("active");
 
+      // Play video only if not Safari
       if (!isSafari && players[slotId]) {
         players[slotId].ready().then(() => {
           players[slotId].play().catch(() => {});
@@ -113,20 +110,9 @@ const switchToProject = (id) => {
   });
 };
 
-// 4. Show all cards on mobile
-const showAllCardsOnMobile = () => {
-  if (isMobile()) {
-    Object.keys(slots).forEach((id) => {
-      slots[id].classList.add("active");
-    });
-  }
-};
-
-// 5. Trigger Observer (Desktop only)
+// 4. Trigger Observer (The Scrolling Logic)
 const triggerObserver = new IntersectionObserver(
   (entries) => {
-    if (isMobile()) return;
-    
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute("data-id");
@@ -140,11 +126,9 @@ const triggerObserver = new IntersectionObserver(
   },
 );
 
-// 6. "Wake Up" Observer (Desktop only)
+// 5. "Wake Up" Observer (Starts Video 1 early - non-Safari only)
 const wakeUpObserver = new IntersectionObserver(
   (entries) => {
-    if (isMobile()) return;
-    
     entries.forEach((entry) => {
       if (entry.isIntersecting && !isSafari) {
         if (players["1"]) {
@@ -156,36 +140,30 @@ const wakeUpObserver = new IntersectionObserver(
   { rootMargin: "0px 0px 300px 0px" },
 );
 
-// 7. Global Initialization
+// 6. Global Initialization
 window.addEventListener("load", () => {
+  // Setup background images for ALL browsers
   setupBackgroundImages();
 
-  if (isMobile()) {
-    // Mobile: Show all cards
-    showAllCardsOnMobile();
-  } else {
-    // Desktop: Initialize players and observers
-    if (!isSafari) {
-      initPlayers();
+  if (!isSafari) {
+    initPlayers();
 
-      const unlockAll = () => {
-        if (players["1"]) players["1"].play();
-        window.removeEventListener("scroll", unlockAll);
-        window.removeEventListener("touchstart", unlockAll);
-      };
-      window.addEventListener("scroll", unlockAll, { passive: true });
-      window.addEventListener("touchstart", unlockAll, { passive: true });
-    }
-
-    triggers.forEach((trigger) => triggerObserver.observe(trigger));
-    if (featuredWrapper) wakeUpObserver.observe(featuredWrapper);
-    switchToProject("1");
+    // Interaction Failsafe (Non-Safari)
+    const unlockAll = () => {
+      if (players["1"]) players["1"].play();
+      window.removeEventListener("scroll", unlockAll);
+      window.removeEventListener("touchstart", unlockAll);
+    };
+    window.addEventListener("scroll", unlockAll, { passive: true });
+    window.addEventListener("touchstart", unlockAll, { passive: true });
   }
-});
 
-// Handle resize
-window.addEventListener("resize", () => {
-  if (isMobile()) {
-    showAllCardsOnMobile();
-  }
+  // Start observing triggers
+  triggers.forEach((trigger) => triggerObserver.observe(trigger));
+
+  // Start observing the whole section to wake it up early
+  if (featuredWrapper) wakeUpObserver.observe(featuredWrapper);
+
+  // Set initial UI state
+  switchToProject("1");
 });
