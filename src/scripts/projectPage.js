@@ -94,8 +94,8 @@ function switchTab(type, event) {
       img.style.opacity = 0;
 
       setTimeout(() => {
-        // Update Source: images/finish-before.png, etc.
-        img.src = `../images/buyBox/${type}-${state}.jpg`;
+        // Update Source: /images/buyBox/finish-before.jpg, etc.
+        img.src = `/images/buyBox/${type}-${state}.jpg`;
         img.style.transition = "opacity 0.3s ease";
         img.style.opacity = 1;
       }, 150);
@@ -113,7 +113,7 @@ window.addEventListener("load", () => {
   types.forEach((type) => {
     states.forEach((state) => {
       const img = new Image();
-      img.src = `../images/buyBox/${type}-${state}.jpg`;
+      img.src = `/images/buyBox/${type}-${state}.jpg`;
     });
   });
 });
@@ -172,27 +172,30 @@ const statsGrid = document.querySelector(".impact-stats-grid");
 if (statsGrid) statsObserver.observe(statsGrid);
 
 // ===== MOBILE BEFORE/AFTER TOGGLE =====
-const toggleButtons = document.querySelectorAll('.comparison-toggle-btn');
+const toggleButton = document.querySelector('.comparison-toggle-btn');
+const toggleIcon = document.querySelector('.toggle-icon');
+const toggleLabel = document.querySelector('.toggle-label');
 const beforeComparison = document.getElementById('before-comparison');
 const afterComparison = document.getElementById('after-comparison');
 
-if (toggleButtons.length > 0 && beforeComparison && afterComparison) {
-  toggleButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const state = button.dataset.state;
-      
-      // Update button states
-      toggleButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-      
-      // Show/hide comparisons
-      if (state === 'before') {
-        beforeComparison.classList.add('active');
-        afterComparison.classList.remove('active');
-      } else {
-        afterComparison.classList.add('active');
-        beforeComparison.classList.remove('active');
-      }
-    });
+if (toggleButton && beforeComparison && afterComparison) {
+  toggleButton.addEventListener('click', () => {
+    const currentState = toggleButton.dataset.state;
+    
+    if (currentState === 'after') {
+      // Switch to Before
+      toggleButton.dataset.state = 'before';
+      toggleIcon.src = '/images/toggle-off.svg';
+      toggleLabel.textContent = 'Before';
+      beforeComparison.classList.add('active');
+      afterComparison.classList.remove('active');
+    } else {
+      // Switch to After
+      toggleButton.dataset.state = 'after';
+      toggleIcon.src = '/images/toggle--on--fill.svg';
+      toggleLabel.textContent = 'After';
+      afterComparison.classList.add('active');
+      beforeComparison.classList.remove('active');
+    }
   });
 }

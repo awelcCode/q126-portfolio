@@ -253,11 +253,17 @@ html {
   display: block;
 }
 
+.tab-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--space-md);
+  gap: var(--space-md);
+}
+
 .tab-list {
   display: flex;
   flex-direction: row;
   gap: var(--space-md);
-  margin-bottom: var(--space-md);
   flex-wrap: nowrap;
   overflow-x: auto;
   scrollbar-width: none;
@@ -354,10 +360,84 @@ html {
     gap: var(--space-lg);
   }
 
-  /* Stack comparison grids */
+  /* Mobile Before/After Toggle */
+  .mobile-comparison-toggle {
+    display: flex;
+    align-items: center;
+    padding-left: var(--space-md);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
+  }
+
+  .comparison-toggle-btn {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-white);
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    flex-direction: row-reverse; /* Icon on right, text on left */
+  }
+
+  .comparison-toggle-btn .toggle-icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.2s ease;
+  }
+
+  .toggle-label {
+    text-align: right;
+    min-width: 50px;
+  }
+
+  /* Tighter spacing on smaller screens */
+  @media (max-width: 768px) {
+    .tab-header {
+      gap: var(--space-sm);
+    }
+
+    .tab-list {
+      gap: var(--space-sm);
+      /* Let tabs use natural space, only scroll when actually needed */
+    }
+
+    .mobile-comparison-toggle {
+      padding-left: var(--space-sm);
+    }
+
+    .comparison-toggle-btn {
+      font-size: 10px;
+    }
+
+    .toggle-label {
+      min-width: 45px;
+    }
+
+    .tab-btn {
+      font-size: 10px;
+      white-space: nowrap;
+    }
+  }
+
+  /* Show only active comparison on mobile */
   .comparison-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-lg);
+    gap: 0;
+  }
+
+  .comparison-item {
+    display: none;
+  }
+
+  .comparison-item.active {
+    display: flex;
   }
 
   /* Stack stats grid */
@@ -369,6 +449,21 @@ html {
   /* Reduce full-bleed padding */
   .full-bleed-dark {
     padding-block: var(--space-xl);
+  }
+}
+
+/* Desktop: hide toggle, show both images */
+@media (min-width: 901px) {
+  .mobile-comparison-toggle {
+    display: none;
+  }
+
+  .comparison-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .comparison-item {
+    display: flex !important;
   }
 }
 

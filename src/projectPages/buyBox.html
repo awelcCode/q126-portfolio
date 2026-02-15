@@ -134,43 +134,46 @@ script: projectPage.js
       </div>
 
       <div class="tab-interface">
-        <div class="tab-list">
-          <button
-            type="button"
-            class="tab-btn active"
-            onclick="switchTab('finish', event)"
-          >
-            Finish
-          </button>
-          <button
-            type="button"
-            class="tab-btn"
-            onclick="switchTab('length', event)"
-          >
-            Overall Length
-          </button>
-          <button
-            type="button"
-            class="tab-btn"
-            onclick="switchTab('mount', event)"
-          >
-            Ceiling Mount
-          </button>
-          <button
-            type="button"
-            class="tab-btn"
-            onclick="switchTab('shade', event)"
-          >
-            Shade Tray
-          </button>
-        </div>
+        <div class="tab-header">
+          <div class="tab-list">
+            <button
+              type="button"
+              class="tab-btn active"
+              onclick="switchTab('finish', event)"
+            >
+              Finish
+            </button>
+            <button
+              type="button"
+              class="tab-btn"
+              onclick="switchTab('length', event)"
+            >
+              Overall Length
+            </button>
+            <button
+              type="button"
+              class="tab-btn"
+              onclick="switchTab('mount', event)"
+            >
+              Ceiling Mount
+            </button>
+            <button
+              type="button"
+              class="tab-btn"
+              onclick="switchTab('shade', event)"
+            >
+              Shade Tray
+            </button>
+          </div>
 
-        <div class="tab-panel">
           <!-- Mobile Before/After Toggle -->
           <div class="mobile-comparison-toggle">
-            <button class="comparison-toggle-btn" data-state="before">Before</button>
-            <button class="comparison-toggle-btn active" data-state="after">After</button>
+            <button class="comparison-toggle-btn active" data-state="after" aria-label="Toggle before/after">
+              <img src="/images/toggle--on--fill.svg" alt="" class="toggle-icon" />
+              <span class="toggle-label">After</span>
+            </button>
           </div>
+        </div>
 
           <div class="comparison-grid">
             <div class="comparison-item" id="before-comparison">

@@ -16,7 +16,7 @@ const projectData = {
   1: {
     title: "Product Page Redesign, Rejuvenation",
     theme: "theme-plum",
-    link: "/buyBox",
+    link: "/projectPages/buyBox",
     posterImage: "images/project1-fallback.jpg", // Background image for all browsers
   },
   2: {
@@ -28,7 +28,7 @@ const projectData = {
   3: {
     title: "Project Collective",
     theme: "theme-tan",
-    link: "/projectCollective",
+    link: "/projectPages/projectCollective",
     posterImage: "images/project3-fallback.jpg",
   },
 };
@@ -37,6 +37,21 @@ const players = {};
 
 // Detect Safari
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+// Make cards clickable on mobile
+if (window.innerWidth <= 900) {
+  Object.keys(slots).forEach((id) => {
+    const slot = slots[id];
+    const data = projectData[id];
+
+    if (slot && data) {
+      slot.style.cursor = "pointer";
+      slot.addEventListener("click", () => {
+        window.location.href = data.link;
+      });
+    }
+  });
+}
 
 // 1. Setup background images for ALL browsers
 const setupBackgroundImages = () => {

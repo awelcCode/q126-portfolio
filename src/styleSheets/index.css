@@ -57,12 +57,10 @@ body {
   flex-direction: column;
   min-height: 100vh;
   padding: 0;
-  padding-inline: var(--mobile-gutter);
 }
 
-/* Nav inside heroWrapper should not add extra padding */
+/* Nav inside heroWrapper - let it handle its own padding from base.css */
 .heroWrapper nav {
-  padding-inline: 0;
   flex-shrink: 0;
 }
 
@@ -74,6 +72,9 @@ body {
   align-content: end;
   flex-grow: 1;
   width: 100%;
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  padding-inline: var(--mobile-gutter);
   align-items: start;
   padding-bottom: var(--space-xl);
 }
@@ -104,7 +105,8 @@ h1 {
   font-size: clamp(24px, 3.33vw, 36px);
   line-height: 1.2;
   margin-bottom: var(--space-lg);
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
+  color: var(--color-dark);
 }
 
 .heroRight {
@@ -356,7 +358,9 @@ iframe {
 }
 
 .resumeBlock {
-  margin-bottom: var(--space-lg); /* Reduced from xl to avoid excessive compounding */
+  margin-bottom: var(
+    --space-lg
+  ); /* Reduced from xl to avoid excessive compounding */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: var(--component-gap);
@@ -522,7 +526,7 @@ section.allWork {
   .hero {
     grid-template-columns: 1fr;
     gap: var(--component-gap);
-    padding: 0 0 var(--space-lg) 0;
+    padding: 0 0 var(--space-xl) 0; /* Match featured and resume section spacing */
   }
 
   .heroLeft {
@@ -535,12 +539,7 @@ section.allWork {
   }
 
   .heroRight {
-    grid-column: 1 / -1;
-    position: static;
-    border-left: none;
-    border-top: 1.5px solid var(--color-dark);
-    padding-left: 0;
-    padding-top: 1.5rem;
+    display: none; /* Hide quicklinks on mobile */
   }
 
   /* Featured Projects - Vertical Cards */
@@ -628,7 +627,9 @@ section.allWork {
   .resumeBlock {
     grid-template-columns: 1fr;
     gap: 0; /* Remove gap - we'll use margins instead */
-    margin-bottom: var(--space-lg); /* Space between Experience and Education blocks */
+    margin-bottom: var(
+      --space-lg
+    ); /* Space between Experience and Education blocks */
   }
 
   .resumeBlock:last-child {
@@ -643,13 +644,17 @@ section.allWork {
   }
 
   .resumeCategoryHeader {
-    margin-bottom: var(--space-xs); /* TIGHT after Experience/Education headings */
+    margin-bottom: var(
+      --space-xs
+    ); /* TIGHT after Experience/Education headings */
   }
 
   .resumeBody {
     grid-column: 1 / -1;
     max-width: 100%;
-    gap: var(--space-md); /* Reasonable gap between resume items - was component-gap */
+    gap: var(
+      --space-md
+    ); /* Reasonable gap between resume items - was component-gap */
   }
 
   .resume-sticky {
@@ -709,7 +714,7 @@ section.allWork {
 
   /* Featured Section - Maintain card layout */
   .featured-wrapper {
-    padding: var(--space-lg) 0;
+    padding: var(--space-xl) 0; /* Match hero and resume section spacing */
   }
 
   .projectImage {
@@ -743,15 +748,21 @@ section.allWork {
 
   .resumeCategoryHeader {
     font-size: 20px;
-    margin-bottom: var(--space-xs); /* TIGHT after "Experience" and "Education" labels */
+    margin-bottom: var(
+      --space-xs
+    ); /* TIGHT after "Experience" and "Education" labels */
   }
 
   .resumeTitle {
-    margin-bottom: var(--space-xs); /* TIGHT after the section label container */
+    margin-bottom: var(
+      --space-xs
+    ); /* TIGHT after the section label container */
   }
 
   .resumeBlock {
-    margin-bottom: var(--space-lg); /* Space between Experience and Education */
+    margin-bottom: var(
+      --space-sm
+    ); /* Minimal space between Experience and Education */
   }
 
   .resumeBlock:last-child {
@@ -759,11 +770,15 @@ section.allWork {
   }
 
   .resumeBody {
-    gap: var(--space-md); /* Even tighter between items */
+    gap: var(--space-sm); /* 1rem spacing between resume items */
   }
 
   .resumeItem {
-    gap: var(--space-sm); /* Tighter within each item */
+    gap: var(--space-xs); /* Tighter within each item card */
+  }
+
+  .resumeItem:first-child {
+    margin-top: 0; /* Remove extra spacing on first item */
   }
 
   .jobTitle h4 {
