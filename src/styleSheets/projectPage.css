@@ -354,10 +354,52 @@ html {
     gap: var(--space-lg);
   }
 
-  /* Stack comparison grids */
+  /* Mobile Before/After Toggle */
+  .mobile-comparison-toggle {
+    display: flex;
+    gap: 0;
+    margin-bottom: var(--space-md);
+    border: 1px solid var(--color-lightGrey);
+    border-radius: 4px;
+    overflow: hidden;
+    width: fit-content;
+  }
+
+  .comparison-toggle-btn {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-lightGrey);
+    background: transparent;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-right: 1px solid var(--color-lightGrey);
+  }
+
+  .comparison-toggle-btn:last-child {
+    border-right: none;
+  }
+
+  .comparison-toggle-btn.active {
+    background: var(--color-white);
+    color: var(--color-dark);
+  }
+
+  /* Show only active comparison on mobile */
   .comparison-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-lg);
+    gap: 0;
+  }
+
+  .comparison-item {
+    display: none;
+  }
+
+  .comparison-item.active {
+    display: flex;
   }
 
   /* Stack stats grid */
@@ -369,6 +411,21 @@ html {
   /* Reduce full-bleed padding */
   .full-bleed-dark {
     padding-block: var(--space-xl);
+  }
+}
+
+/* Desktop: hide toggle, show both images */
+@media (min-width: 901px) {
+  .mobile-comparison-toggle {
+    display: none;
+  }
+
+  .comparison-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .comparison-item {
+    display: flex !important;
   }
 }
 
