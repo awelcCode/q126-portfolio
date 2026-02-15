@@ -170,3 +170,29 @@ const statsObserver = new IntersectionObserver(
 
 const statsGrid = document.querySelector(".impact-stats-grid");
 if (statsGrid) statsObserver.observe(statsGrid);
+
+// ===== MOBILE BEFORE/AFTER TOGGLE =====
+const toggleButtons = document.querySelectorAll('.comparison-toggle-btn');
+const beforeComparison = document.getElementById('before-comparison');
+const afterComparison = document.getElementById('after-comparison');
+
+if (toggleButtons.length > 0 && beforeComparison && afterComparison) {
+  toggleButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const state = button.dataset.state;
+      
+      // Update button states
+      toggleButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      
+      // Show/hide comparisons
+      if (state === 'before') {
+        beforeComparison.classList.add('active');
+        afterComparison.classList.remove('active');
+      } else {
+        afterComparison.classList.add('active');
+        beforeComparison.classList.remove('active');
+      }
+    });
+  });
+}

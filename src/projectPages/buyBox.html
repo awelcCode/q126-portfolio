@@ -1,407 +1,369 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Buy Box 2.0 Redesign | Anthony Welch</title>
-    <link rel="stylesheet" href="../styleSheets/base.css" />
-    <link rel="stylesheet" href="../styleSheets/projectPage.css" />
-  </head>
-  <body>
-    <nav>
-      <div class="navColor">
-        <div class="brand">
-          <div class="logoContainer">
-            <a href="../index.html"
-              ><img src="../images/navLogo.png" alt="Logo"
-            /></a>
-          </div>
-          <div class="brandWords">
-            <h5 class="name">Anthony Welch</h5>
-            <h5 class="niche">Visual Designer</h5>
-          </div>
-        </div>
-        <div class="menu">
-          <img src="../images/menu.svg" alt="menu icon" />
-        </div>
-      </div>
-    </nav>
+---
+layout: base.html
+title: Buy Box 2.0 Redesign
+stylesheet: projectPage.css
+script: projectPage.js
+---
 
-    <header class="project-hero">
-      <img
-        src="../images/buyBox/portfolioHeroMockOpt.png"
-        alt="Buy Box 2.0 Hero View"
-      />
-    </header>
+<header class="project-hero">
+  <img
+    src="/images/buyBox/portfolioHeroMockOpt.png"
+    alt="Buy Box 2.0 Hero View"
+  />
+</header>
 
-    <main class="project-body-wrapper">
-      <aside class="project-nav-rail">
-        <a href="#intro" class="rail-item active">Intro</a>
-        <a href="#analysis" class="rail-item">Analysis</a>
-        <a href="#iteration" class="rail-item">Iteration</a>
-        <a href="#exploration" class="rail-item">Additional Considerations</a>
-        <a href="#testing" class="rail-item">Testing</a>
-        <a href="#final" class="rail-item">Final Designs</a>
-        <a href="#outcomes" class="rail-item">Outcomes</a>
-      </aside>
+<main class="project-body-wrapper">
+  <aside class="project-nav-rail">
+    <a href="#intro" class="rail-item active">Intro</a>
+    <a href="#analysis" class="rail-item">Analysis</a>
+    <a href="#iteration" class="rail-item">Iteration</a>
+    <a href="#exploration" class="rail-item">Additional Considerations</a>
+    <a href="#testing" class="rail-item">Testing</a>
+    <a href="#final" class="rail-item">Final Designs</a>
+    <a href="#outcomes" class="rail-item">Outcomes</a>
+  </aside>
 
-      <article class="story-content">
-        <section id="intro">
-          <span class="quickLabel">Product Page Redesign</span>
-          <h1>Streamlining The Buy Box</h1>
+  <article class="story-content">
+    <section id="intro">
+      <span class="quickLabel">Product Page Redesign</span>
+      <h1>Streamlining The Buy Box</h1>
+      <p>
+        <span class="marker-effect"
+          >At Rejuvenation, the Buy Box is a high-stakes component where
+          customers configure, price, and purchase customizable
+          products.</span
+        >Over time, this area had grown dense with duplicative instructions
+        and inconsistent styles, creating a fractured information hierarchy.
+      </p>
+
+      <p>
+        Working alongside my senior designer, Maria, I contributed heavily
+        to the redesign from early exploration through launch. My role
+        included developing interaction patterns, proposing simplifications
+        to complex configuration steps, and assisting in shaping the visual
+        clarity of the final UI.
+      </p>
+
+      <div class="vertical-stack">
+        <div class="vertical-stack-item">
+          <span class="quickLabel">Project Phases & Timelines</span>
           <p>
-            <span class="marker-effect"
-              >At Rejuvenation, the Buy Box is a high-stakes component where
-              customers configure, price, and purchase customizable
-              products.</span
-            >Over time, this area had grown dense with duplicative instructions
-            and inconsistent styles, creating a fractured information hierarchy.
+            With only two weeks to design and present a wholly redesigned
+            Buy Box, we parallel-pathed development and usability testing.
+            This accelerated pace allowed insights from early testing to
+            inform ongoing design refinements in real time.
           </p>
-
-          <p>
-            Working alongside my senior designer, Maria, I contributed heavily
-            to the redesign from early exploration through launch. My role
-            included developing interaction patterns, proposing simplifications
-            to complex configuration steps, and assisting in shaping the visual
-            clarity of the final UI.
-          </p>
-
-          <div class="vertical-stack">
-            <div class="vertical-stack-item">
-              <span class="quickLabel">Project Phases & Timelines</span>
-              <p>
-                With only two weeks to design and present a wholly redesigned
-                Buy Box, we parallel-pathed development and usability testing.
-                This accelerated pace allowed insights from early testing to
-                inform ongoing design refinements in real time.
-              </p>
-              <img
-                src="../images/buyBox/projectPhases.png"
-                class="img-full"
-                alt="Project timeline diagram"
-              />
-            </div>
-          </div>
-        </section>
-
-        <section id="analysis">
-          <span class="quickLabel">Foundation</span>
-          <h2>Hierarchy & Type Styles</h2>
-          <p>
-            Maria analyzed the PIP's legacy styles and redefined the hierarchies
-            to quicken our rebuild. By shifting headings from dark grey to black
-            and limiting the use of all-caps, we improved legibility and
-            established a more sophisticated aesthetic.
-          </p>
-          <div class="asset-group-wrapper">
-            <div class="asset-flex-group">
-              <div>
-                <img
-                  src="../images/buyBox/hierarchyEvaluation.png"
-                  alt="Type hierarchy evaluation"
-                />
-              </div>
-              <div>
-                <img
-                  src="../images/buyBox/revisedHierarchy.png"
-                  alt="Redefined type styles"
-                />
-              </div>
-            </div>
-            <span class="caption"
-              >Type Hierarchy Evaluation: Establishing a cleaner
-              foundation.</span
-            >
-          </div>
-
-          <p>
-            To ground our decisions, I conducted a competitive analysis,
-            collecting screenshots from high-end commerce peers to defend our
-            move toward a more modular selection system.
-          </p>
-          <div class="vertical-stack">
-            <div class="vertical-stack-item">
-              <img
-                src="../images/buyBox/productDetails-opt.png"
-                class="img-full"
-                alt="Project timeline diagram"
-              />
-              <span class="caption">References from Competitive Analysis</span>
-            </div>
-          </div>
-        </section>
-      </article>
-
-      <section class="full-bleed-dark" id="iteration">
-        <div class="media-container">
-          <div class="story-content-standalone">
-            <span class="quickLabel" style="color: var(--color-midGrey)"
-              >Iteration</span
-            >
-            <h2 style="color: white; margin-bottom: 2rem">
-              Selection Point Optimization
-            </h2>
-            <p
-              style="
-                color: var(--color-lightGrey);
-                max-width: 65ch;
-                margin-bottom: 4rem;
-              "
-            >
-              I repeatedly iterated on each selection point to reduce cognitive
-              load. We successfully reduced the length of the Ceiling Mount
-              dropdown by 60% and introduced a shade table scrollbar that cut
-              multiple full scrolls down to just two and a half rows.
-            </p>
-          </div>
-
-          <div class="tab-interface">
-            <div class="tab-list">
-              <button
-                type="button"
-                class="tab-btn active"
-                onclick="switchTab('finish', event)"
-              >
-                Finish
-              </button>
-              <button
-                type="button"
-                class="tab-btn"
-                onclick="switchTab('length', event)"
-              >
-                Overall Length
-              </button>
-              <button
-                type="button"
-                class="tab-btn"
-                onclick="switchTab('mount', event)"
-              >
-                Ceiling Mount
-              </button>
-              <button
-                type="button"
-                class="tab-btn"
-                onclick="switchTab('shade', event)"
-              >
-                Shade Tray
-              </button>
-            </div>
-
-            <div class="tab-panel">
-              <div class="comparison-grid">
-                <div class="comparison-item">
-                  <img
-                    id="before-image"
-                    src="../images/buyBox/finish-before.jpg"
-                    alt="Legacy Finish Tray"
-                  />
-                  <span class="label-mono">Before</span>
-                </div>
-                <div class="comparison-item">
-                  <img
-                    id="after-image"
-                    src="../images/buyBox/finish-after.jpg"
-                    alt="Redesigned Finish Tray"
-                  />
-                  <span class="label-mono">After</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <article class="story-content">
-        <section id="exploration">
-          <span class="quickLabel">Additional Considerations</span>
-          <h2>Image Control Patterns</h2>
-          <p>
-            The legacy PIP experience signaled additional images only through
-            small numbers. I researched and built out several options to provide
-            more intuitive gallery signaling, leading to a clearer final
-            direction for mobile and desktop image navigation.
-          </p>
-
-          <div class="vertical-stack">
-            <div class="vertical-stack-item">
-              <img
-                src="../images/buyBox/image-exploration.png"
-                class="img-full"
-                alt="Image control explorations"
-              />
-              <span class="caption"
-                >Exploration: Enhancing gallery signaling and intuitive
-                controls.</span
-              >
-            </div>
-          </div>
-        </section>
-
-        <section id="testing">
-          <span class="quickLabel">Validation</span>
-          <h2>Usability Testing</h2>
-          <p>
-            Following executive approval, I wrote a usability testing plan and
-            script to gauge preferences around educational copy. I conducted
-            tests with seven participants, testing "Educational Copy" vs. "No
-            Educational Copy."
-          </p>
-
-          <div class="asset-flex-group">
-            <div>
-              <img
-                src="../images/buyBox/usabilityTestPlan.png"
-                alt="Usability test plan introduction"
-              />
-            </div>
-            <div>
-              <img
-                src="../images/buyBox/usabilityTestScript.png"
-                alt="Test script excerpt"
-              />
-            </div>
-          </div>
-          <div class="asset-group-wrapper">
-            <div class="asset-flex-group">
-              <div>
-                <img
-                  src="../images/buyBox/afterLengthSubCopy-opt 2.png"
-                  alt="Overall Length Tray with Subcopy"
-                  class="padding-help-white"
-                />
-              </div>
-              <div>
-                <img
-                  src="../images/buyBox/afterLengthNoSubCopy-opt.png"
-                  alt="Overall Length Tray without Subcopy"
-                  class="padding-help-white"
-                />
-              </div>
-            </div>
-            <span class="caption"
-              >Overall Length Trays With and Without Eductional Subcopy</span
-            >
-          </div>
-          <p>
-            We learned that users felt confident when educational content was
-            delivered through tooltips rather than on-page text.
-            <span class="marker-effect"
-              >Our final recommendation: rely on tooltip functionality for
-              guidance to maintain a clean configuration UI.</span
-            >
-          </p>
-        </section>
-
-        <section id="final">
-          <span class="quickLabel">Results</span>
-          <h2>Next Steps & Implementation</h2>
-          <p>
-            The redesign moved into development with Regelyn, while we prepared
-            to scale the Buy Box logic to other PIP types, including Guided PIPs
-            for Upholstered Furniture and Simple PIPs for hardware. Looking
-            forward, we are exploring flyout trays and optimizing the order of
-            selection points based on testing feedback.
-          </p>
-
-          <p>
-            The redesign moved into development with Regelyn, while we prepared
-            to scale the Buy Box logic to other PIP types, including Guided PIPs
-            for Upholstered Furniture and Simple PIPs for hardware. Looking
-            forward, we are exploring flyout trays and optimizing the order of
-            selection points based on testing feedback.
-          </p>
-
           <img
-            src="../images/buyBox/buyBoxFinal-combined.png"
+            src="/images/buyBox/projectPhases.png"
             class="img-full"
-            alt="Final Configured Lighting Desktop and Mobile"
+            alt="Project timeline diagram"
           />
+        </div>
+      </div>
+    </section>
 
-          <div class="asset-flex-group">
-            <div>
-              <img
-                src="../images/buyBox/tooltip-finish.png"
-                alt="Tooltip for finish selection"
-              />
-            </div>
-            <div>
-              <img
-                src="../images/buyBox/tooltip-length.png"
-                alt="Tooltip for length selection"
-              />
-            </div>
+    <section id="analysis">
+      <span class="quickLabel">Foundation</span>
+      <h2>Hierarchy & Type Styles</h2>
+      <p>
+        Maria analyzed the PIP's legacy styles and redefined the hierarchies
+        to quicken our rebuild. By shifting headings from dark grey to black
+        and limiting the use of all-caps, we improved legibility and
+        established a more sophisticated aesthetic.
+      </p>
+      <div class="asset-group-wrapper">
+        <div class="asset-flex-group">
+          <div>
+            <img
+              src="/images/buyBox/hierarchyEvaluation.png"
+              alt="Type hierarchy evaluation"
+            />
           </div>
-          <span class="caption"
-            >Final Implementation: Integrated tooltips and streamlined lighting
-            configuration.</span
+          <div>
+            <img
+              src="/images/buyBox/revisedHierarchy.png"
+              alt="Redefined type styles"
+            />
+          </div>
+        </div>
+        <span class="caption"
+          >Type Hierarchy Evaluation: Establishing a cleaner
+          foundation.</span
+        >
+      </div>
+
+      <p>
+        To ground our decisions, I conducted a competitive analysis,
+        collecting screenshots from high-end commerce peers to defend our
+        move toward a more modular selection system.
+      </p>
+      <div class="vertical-stack">
+        <div class="vertical-stack-item">
+          <img
+            src="/images/buyBox/productDetails-opt.png"
+            class="img-full"
+            alt="Project timeline diagram"
+          />
+          <span class="caption">References from Competitive Analysis</span>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <section class="full-bleed-dark" id="iteration">
+    <div class="media-container">
+      <div class="story-content-standalone">
+        <span class="quickLabel" style="color: var(--color-midGrey)"
+          >Iteration</span
+        >
+        <h2 style="color: white; margin-bottom: 2rem">
+          Selection Point Optimization
+        </h2>
+        <p
+          style="
+            color: var(--color-lightGrey);
+            max-width: 65ch;
+            margin-bottom: 4rem;
+          "
+        >
+          I repeatedly iterated on each selection point to reduce cognitive
+          load. We successfully reduced the length of the Ceiling Mount
+          dropdown by 60% and introduced a shade table scrollbar that cut
+          multiple full scrolls down to just two and a half rows.
+        </p>
+      </div>
+
+      <div class="tab-interface">
+        <div class="tab-list">
+          <button
+            type="button"
+            class="tab-btn active"
+            onclick="switchTab('finish', event)"
           >
-        </section>
-
-        <section id="outcomes">
-          <span class="quickLabel">Results & Impact</span>
-          <h2>Measured Success</h2>
-
-          <p>
-            The impact of these Buy Box and configuration improvements is
-            directly reflected in the performance data following the update
-            period. In a pre/post comparison, configured lighting conversion
-            rate increased +13%, and revenue per visit (RPV) climbed 17%, even
-            as traffic increased significantly.
-          </p>
-
-          <div class="asset-group-wrapper">
-            <div class="impact-stats-grid">
-              <div class="stat-item">
-                <span class="stat-value">+13%</span>
-                <span class="stat-label">Conversion Rate</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-value">+17%</span>
-                <span class="stat-label">Revenue Per Visit</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-value">+11%</span>
-                <span class="stat-label">Total Orders</span>
-              </div>
-            </div>
-          </div>
-
-          <p>
-            Notably, during this window, "simple" products (non-configurable)
-            saw declines in both conversion and RPV. This divergence suggests
-            that the stronger performance of configured products was not driven
-            solely by traffic mix or seasonal trends, but by the tangible
-            improvements made to the configuration experience itself.
-          </p>
-
-          <p>
-            Looking forward, we are preparing to scale this logic to other
-            high-complexity categories, including Upholstered Furniture and
-            Hardware, ensuring a consistent and high-converting experience
-            across the entire Rejuvenation catalog.
-          </p>
-        </section>
-      </article>
-    </main>
-    <footer class="site-footer">
-      <div class="footer-container">
-        <div class="footer-brand">
-          <h5 class="name">ANTHONY WELCH</h5>
-          <h5 class="niche">VISUAL DESIGNER</h5>
+            Finish
+          </button>
+          <button
+            type="button"
+            class="tab-btn"
+            onclick="switchTab('length', event)"
+          >
+            Overall Length
+          </button>
+          <button
+            type="button"
+            class="tab-btn"
+            onclick="switchTab('mount', event)"
+          >
+            Ceiling Mount
+          </button>
+          <button
+            type="button"
+            class="tab-btn"
+            onclick="switchTab('shade', event)"
+          >
+            Shade Tray
+          </button>
         </div>
 
-        <nav class="footer-links">
-          <a
-            href="https://www.linkedin.com/in/anthony-welch-26b5b3133"
-            target="_blank"
-            class="footer-link"
-            >LinkedIn</a
-          >
-          <a href="../about.html" class="footer-link">About</a>
-          <a href="../index.html" class="footer-link">Fun</a>
-        </nav>
+        <div class="tab-panel">
+          <!-- Mobile Before/After Toggle -->
+          <div class="mobile-comparison-toggle">
+            <button class="comparison-toggle-btn" data-state="before">Before</button>
+            <button class="comparison-toggle-btn active" data-state="after">After</button>
+          </div>
+
+          <div class="comparison-grid">
+            <div class="comparison-item" id="before-comparison">
+              <img
+                id="before-image"
+                src="/images/buyBox/finish-before.jpg"
+                alt="Legacy Finish Tray"
+              />
+              <span class="label-mono">Before</span>
+            </div>
+            <div class="comparison-item active" id="after-comparison">
+              <img
+                id="after-image"
+                src="/images/buyBox/finish-after.jpg"
+                alt="Redesigned Finish Tray"
+              />
+              <span class="label-mono">After</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
-    <script src="../scripts/projectPage.js"></script>
-  </body>
-</html>
+    </div>
+  </section>
+
+  <article class="story-content">
+    <section id="exploration">
+      <span class="quickLabel">Additional Considerations</span>
+      <h2>Image Control Patterns</h2>
+      <p>
+        The legacy PIP experience signaled additional images only through
+        small numbers. I researched and built out several options to provide
+        more intuitive gallery signaling, leading to a clearer final
+        direction for mobile and desktop image navigation.
+      </p>
+
+      <div class="vertical-stack">
+        <div class="vertical-stack-item">
+          <img
+            src="/images/buyBox/image-exploration.png"
+            class="img-full"
+            alt="Image control explorations"
+          />
+          <span class="caption"
+            >Exploration: Enhancing gallery signaling and intuitive
+            controls.</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="testing">
+      <span class="quickLabel">Validation</span>
+      <h2>Usability Testing</h2>
+      <p>
+        Following executive approval, I wrote a usability testing plan and
+        script to gauge preferences around educational copy. I conducted
+        tests with seven participants, testing "Educational Copy" vs. "No
+        Educational Copy."
+      </p>
+
+      <div class="asset-flex-group">
+        <div>
+          <img
+            src="/images/buyBox/usabilityTestPlan.png"
+            alt="Usability test plan introduction"
+          />
+        </div>
+        <div>
+          <img
+            src="/images/buyBox/usabilityTestScript.png"
+            alt="Test script excerpt"
+          />
+        </div>
+      </div>
+      <div class="asset-group-wrapper">
+        <div class="asset-flex-group">
+          <div>
+            <img
+              src="/images/buyBox/afterLengthSubCopy-opt 2.png"
+              alt="Overall Length Tray with Subcopy"
+              class="padding-help-white"
+            />
+          </div>
+          <div>
+            <img
+              src="/images/buyBox/afterLengthNoSubCopy-opt.png"
+              alt="Overall Length Tray without Subcopy"
+              class="padding-help-white"
+            />
+          </div>
+        </div>
+        <span class="caption"
+          >Overall Length Trays With and Without Eductional Subcopy</span
+        >
+      </div>
+      <p>
+        We learned that users felt confident when educational content was
+        delivered through tooltips rather than on-page text.
+        <span class="marker-effect"
+          >Our final recommendation: rely on tooltip functionality for
+          guidance to maintain a clean configuration UI.</span
+        >
+      </p>
+    </section>
+
+    <section id="final">
+      <span class="quickLabel">Results</span>
+      <h2>Next Steps & Implementation</h2>
+      <p>
+        The redesign moved into development with Regelyn, while we prepared
+        to scale the Buy Box logic to other PIP types, including Guided PIPs
+        for Upholstered Furniture and Simple PIPs for hardware. Looking
+        forward, we are exploring flyout trays and optimizing the order of
+        selection points based on testing feedback.
+      </p>
+
+      <p>
+        The redesign moved into development with Regelyn, while we prepared
+        to scale the Buy Box logic to other PIP types, including Guided PIPs
+        for Upholstered Furniture and Simple PIPs for hardware. Looking
+        forward, we are exploring flyout trays and optimizing the order of
+        selection points based on testing feedback.
+      </p>
+
+      <img
+        src="/images/buyBox/buyBoxFinal-combined.png"
+        class="img-full"
+        alt="Final Configured Lighting Desktop and Mobile"
+      />
+
+      <div class="asset-flex-group">
+        <div>
+          <img
+            src="/images/buyBox/tooltip-finish.png"
+            alt="Tooltip for finish selection"
+          />
+        </div>
+        <div>
+          <img
+            src="/images/buyBox/tooltip-length.png"
+            alt="Tooltip for length selection"
+          />
+        </div>
+      </div>
+      <span class="caption"
+        >Final Implementation: Integrated tooltips and streamlined lighting
+        configuration.</span
+      >
+    </section>
+
+    <section id="outcomes">
+      <span class="quickLabel">Results & Impact</span>
+      <h2>Measured Success</h2>
+
+      <p>
+        The impact of these Buy Box and configuration improvements is
+        directly reflected in the performance data following the update
+        period. In a pre/post comparison, configured lighting conversion
+        rate increased +13%, and revenue per visit (RPV) climbed 17%, even
+        as traffic increased significantly.
+      </p>
+
+      <div class="asset-group-wrapper">
+        <div class="impact-stats-grid">
+          <div class="stat-item">
+            <span class="stat-value">+13%</span>
+            <span class="stat-label">Conversion Rate</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">+17%</span>
+            <span class="stat-label">Revenue Per Visit</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">+11%</span>
+            <span class="stat-label">Total Orders</span>
+          </div>
+        </div>
+      </div>
+
+      <p>
+        Notably, during this window, "simple" products (non-configurable)
+        saw declines in both conversion and RPV. This divergence suggests
+        that the stronger performance of configured products was not driven
+        solely by traffic mix or seasonal trends, but by the tangible
+        improvements made to the configuration experience itself.
+      </p>
+
+      <p>
+        Looking forward, we are preparing to scale this logic to other
+        high-complexity categories, including Upholstered Furniture and
+        Hardware, ensuring a consistent and high-converting experience
+        across the entire Rejuvenation catalog.
+      </p>
+    </section>
+  </article>
+</main>
