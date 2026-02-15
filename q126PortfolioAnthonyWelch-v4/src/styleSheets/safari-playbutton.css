@@ -1,0 +1,27 @@
+/* Safari Play Button Overlay */
+.safari-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0.9;
+}
+
+.safari-play-button:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  opacity: 1;
+}
+
+.safari-play-button:active {
+  transform: translate(-50%, -50%) scale(0.95);
+}
+
+.safari-play-button svg {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+}

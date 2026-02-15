@@ -1,0 +1,833 @@
+/* ===== 1. VARIABLES & RESET ===== */
+.resume,
+.featured-wrapper .pageSectionMargin {
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  padding-inline: var(--mobile-gutter);
+}
+
+/* ===== 1. ADDITIONAL VARIABLES FOR INDEX ===== */
+:root {
+  /* Theme-specific colors for index page */
+  --theme-plum: #2e2224;
+  --theme-plum-text: #f2e8e6;
+  --theme-ocean: #1a2023;
+  --theme-ocean-text: #d9e1e6;
+  --theme-tan: #d3c9c2;
+  --theme-tan-text: #151717;
+
+  /* Index-specific utilities */
+  --transition-slow: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "IBM Plex Mono", monospace;
+  color: var(--color-dark);
+  line-height: 1.5;
+  background: var(--color-lightestGrey);
+  overflow-x: hidden;
+}
+
+/* ===== 2. LAYOUT UTILITIES ===== */
+.pageSectionMargin {
+  padding-block: var(--space-2xl);
+  width: 100%;
+}
+
+/* Index-specific centering for main sections */
+.hero,
+.featured-wrapper .pageSectionMargin,
+.resume,
+.fun-archive {
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  width: 100%;
+}
+
+/* ===== 3. HERO SECTION ===== */
+
+.heroWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0;
+  padding-inline: var(--mobile-gutter);
+}
+
+/* Nav inside heroWrapper should not add extra padding */
+.heroWrapper nav {
+  padding-inline: 0;
+  flex-shrink: 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--component-gap);
+  row-gap: var(--space-lg);
+  align-content: end;
+  flex-grow: 1;
+  width: 100%;
+  align-items: start;
+  padding-bottom: var(--space-xl);
+}
+
+.resumeBlock {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--component-gap);
+  width: 100%;
+  align-items: start;
+}
+
+.heroLeft {
+  grid-column: 1 / 10; /* Same as .story-content */
+  align-self: end;
+}
+
+h1 {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-size: clamp(2.25rem, 5vw, 4rem); /* Match Story H1 */
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.heroLeft h1 {
+  font-weight: 400;
+  font-size: clamp(24px, 3.33vw, 36px);
+  line-height: 1.2;
+  margin-bottom: var(--space-lg);
+  letter-spacing: -0.04em;
+}
+
+.heroRight {
+  grid-column: 10 / 13; /* Same as .project-nav-rail */
+  position: sticky;
+  top: 160px;
+  height: fit-content;
+  border-left: 1.5px solid var(--color-dark);
+  padding-left: 1.5rem;
+  align-self: end; /* Don't push to bottom */
+}
+
+.heroRight,
+.resumeTitle {
+  grid-column: 10/13;
+}
+
+div.heroBody {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-sm);
+}
+
+.heroBody {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 540px;
+}
+
+.heroBody p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 60ch;
+  color: var(--color-dark);
+  letter-spacing: auto;
+}
+
+p.heroBody.mobile {
+  display: none;
+}
+
+.section-label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-midGrey);
+  margin-bottom: var(--space-sm);
+}
+
+.quickLink {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-midGrey);
+  display: block;
+  padding: 4px 0;
+  transition: all 0.2s ease;
+}
+
+.quickLink:hover {
+  color: var(--color-dark);
+  transform: translateX(4px); /* Subtle "nudge" on hover */
+}
+/*color: var(--color-midGrey);/*
+
+/* ===== 5. FEATURED STICKY SYSTEM ===== */
+
+/* This sets the "scrollable runway" */
+.featured-wrapper {
+  position: relative;
+  /* Increase height slightly to 350vh to give the 3rd project 
+     more "breathing room" at the bottom */
+  /*height: 900vh;*/
+  background-color: var(--color-white);
+  display: block;
+}
+
+/* This stays locked to the screen */
+.sticky-view {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  z-index: 5;
+
+  background-color: var(--theme-plum);
+  color: var(--theme-plum-text);
+
+  /* Combined transition for a premium feel */
+  transition:
+    background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Triggers are invisible milestones in the scroll path */
+.project-trigger {
+  /* 150vh height ensures the project stays "active" longer */
+  height: 250vh;
+  width: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Project Content Layout */
+.projectTitleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.projectTitle {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+
+.projectCTA {
+  font-size: 12px;
+  border: 1px solid currentColor;
+  padding: 0.5rem 1.2rem;
+  text-decoration: none;
+  border-radius: 4px;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+/* === project image ====*/
+.projectImage {
+  width: 100%;
+  /* This ensures the container stays at your 1254x776 ratio even when empty */
+  transition: opacity 0.4s ease-in-out;
+  background: var(--color-dark); /* Shows while video loads */
+  aspect-ratio: 1254 / 776;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Adds depth to the cards */
+  overflow: hidden;
+  position: relative;
+}
+
+.video-slot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  visibility: hidden; /* Tells the browser it's not needed yet */
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.video-slot.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2; /* Brining it to the top layer */
+}
+
+.projectImage img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 1;
+  transition:
+    opacity 0.6s ease-in-out,
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+iframe {
+  pointer-events: none;
+  background: transparent;
+}
+
+/* --- THEMES --- */
+.theme-plum {
+  background-color: var(--theme-plum);
+  color: var(--theme-plum-text);
+}
+.theme-ocean {
+  background-color: var(--theme-ocean);
+  color: var(--theme-ocean-text);
+}
+.theme-tan {
+  background-color: var(--theme-tan);
+  color: var(--theme-tan-text);
+}
+/* Ensure CTA inherits the theme color for its border */
+.theme-plum .projectCTA,
+.theme-ocean .projectCTA,
+.theme-tan .projectCTA {
+  color: inherit;
+  border-color: currentColor;
+}
+
+/* ==== ODDS AND ENDS ==== */
+
+.archive-meta-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--color-dark);
+  border-bottom: 1px solid var(--color-dark);
+  padding: var(--space-xl) 0;
+  margin-bottom: var(--space-2xl);
+}
+
+.archive-gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+}
+
+.meta-large {
+  display: block;
+  font-size: 2.5rem;
+  color: var(--theme-tan);
+  font-family: "IBM Plex Mono", monospace;
+}
+
+/* ===== 6. RESUME SECTION ===== */
+.resume {
+  background: var(--color-lightestGrey);
+  position: relative;
+  z-index: 20;
+  padding-top: var(--space-xl);
+  padding-bottom: 0;
+}
+
+.resume-header {
+  font-size: clamp(1.875rem, 1.68rem + 0.83vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-md);
+}
+
+.resumeTitle {
+  grid-column: 1 / 4; /* Category headers (Work/Education) */
+  position: sticky;
+  top: var(--nav-height);
+  padding-top: 4px;
+}
+
+.resumeBlock {
+  margin-bottom: var(--space-lg); /* Reduced from xl to avoid excessive compounding */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--component-gap);
+}
+
+.resumeBlock:last-child {
+  margin-bottom: 0; /* Remove margin on last block */
+}
+
+.resume-sticky {
+  position: sticky;
+  top: 96px;
+}
+
+.resume h2.h2Home {
+  font-family: "IBM Plex Mono", monospace;
+  /* Scales from 30px (1.875rem) to 40px (2.5rem) */
+  font-size: clamp(1.875rem, 1.68rem + 0.83vw, 2.5rem);
+  font-weight: 500; /* Medium */
+  letter-spacing: -0.04em; /* -2% Figma spacing */
+  line-height: 1.1; /* Tight leading for large headers */
+  margin-bottom: var(--space-lg);
+  transform: translateZ(0);
+  grid-column: 1/13;
+}
+
+.resumeBody {
+  grid-column: 6 / 12; /* Narrative content */
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg); /* More breath between jobs */
+}
+
+.resumeCategoryHeader {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: clamp(1.5rem, 1.22rem + 1.18vw, 2rem);
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: -0.01em;
+  color: var(--color-dark);
+  margin: 0;
+
+  /* Reset the large margins/sizes from before */
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.resumeItem {
+  padding-bottom: 0;
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-width: 65ch;
+}
+
+.resumeItem:first-child {
+  margin-top: var(--space-xs);
+  align-items: baseline;
+}
+
+.resumeItem h4 {
+  font-size: 1.1rem;
+}
+.resumeItem h5 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+.jobTitle h4 {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  line-height: 1.3;
+  margin-bottom: var(--space-xs);
+}
+.employer h5,
+.institution h5 {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: var(--color-midGrey);
+}
+.jobDescription {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+.jobDescription p {
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 150%;
+  font-size: 0.75rem;
+}
+
+.courseSubsection h6 {
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.courseSubsection {
+  display: flex;
+  gap: var(--space-xs);
+  flex-direction: column;
+}
+
+div.courseContainer {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--space-sm);
+  row-gap: var(--space-xs);
+}
+
+div.courseContainer p {
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 100%;
+  font-size: 0.75rem;
+}
+
+/* ALL WORK */
+section.allWork {
+  display: none;
+}
+
+/* ===== 7. RESPONSIVE ===== */
+
+@media (max-width: 1100px) {
+  .resumeBody {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .resumeBlock {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .resume-sticky {
+    position: static;
+    margin-bottom: var(--space-sm);
+  }
+
+  .projectTitleContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+}
+
+/* ===== MOBILE RESPONSIVE IMPROVEMENTS ===== */
+
+/* === 900px: Major layout shift to single column === */
+/* Tablet and below - 900px */
+@media (max-width: 900px) {
+  /* Hero Section */
+  .hero {
+    grid-template-columns: 1fr;
+    gap: var(--component-gap);
+    padding: 0 0 var(--space-lg) 0;
+  }
+
+  .heroLeft {
+    grid-column: 1 / -1;
+  }
+
+  .heroLeft h1 {
+    font-size: clamp(20px, 5vw, 28px);
+    margin-bottom: var(--component-gap);
+  }
+
+  .heroRight {
+    grid-column: 1 / -1;
+    position: static;
+    border-left: none;
+    border-top: 1.5px solid var(--color-dark);
+    padding-left: 0;
+    padding-top: 1.5rem;
+  }
+
+  /* Featured Projects - Vertical Cards */
+  .featured-wrapper {
+    background-color: var(--color-dark);
+    padding: var(--space-xl) 0;
+    height: auto;
+  }
+
+  .sticky-view {
+    position: static;
+    height: auto;
+    background-color: transparent;
+  }
+
+  .featured-wrapper .pageSectionMargin {
+    padding-inline: var(--mobile-gutter);
+    padding-block: 0;
+  }
+
+  .projectImage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    aspect-ratio: auto;
+  }
+
+  /* Make each video-slot a card */
+  .video-slot {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: auto;
+  }
+
+  /* Add project titles before each video */
+  .video-slot::before {
+    content: "";
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-lightGrey);
+    margin-bottom: var(--space-sm);
+    order: -1;
+  }
+
+  #video-1::before {
+    content: "Product Page Redesign, Rejuvenation";
+  }
+
+  #video-2::before {
+    content: "Circuit Coffee Logo Animation";
+  }
+
+  #video-3::before {
+    content: "Project Collective";
+  }
+
+  /* The video container inside each slot */
+  .video-slot > div {
+    aspect-ratio: 1254 / 776;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  /* Hide the sticky title container */
+  .projectTitleContainer {
+    display: none;
+  }
+
+  .project-trigger {
+    display: none;
+  }
+
+  /* Resume Section */
+  .resume {
+    padding-inline: var(--mobile-gutter); /* Add side margins on mobile */
+  }
+
+  .resumeBlock {
+    grid-template-columns: 1fr;
+    gap: 0; /* Remove gap - we'll use margins instead */
+    margin-bottom: var(--space-lg); /* Space between Experience and Education blocks */
+  }
+
+  .resumeBlock:last-child {
+    margin-bottom: 0; /* No margin after last block */
+  }
+
+  .resumeTitle {
+    grid-column: 1 / -1;
+    position: static;
+    margin-bottom: var(--space-xs); /* TIGHT after "EXPERIENCE" label */
+    padding-top: 0;
+  }
+
+  .resumeCategoryHeader {
+    margin-bottom: var(--space-xs); /* TIGHT after Experience/Education headings */
+  }
+
+  .resumeBody {
+    grid-column: 1 / -1;
+    max-width: 100%;
+    gap: var(--space-md); /* Reasonable gap between resume items - was component-gap */
+  }
+
+  .resume-sticky {
+    position: static;
+    margin-bottom: var(--space-sm);
+  }
+
+  /* Archive Section */
+  .archive-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .archive-meta-bar {
+    grid-template-columns: repeat(3, 1fr);
+    padding: var(--space-md) 0;
+    margin-bottom: var(--space-xl);
+  }
+}
+
+/* === 600px: Aggressive mobile optimization === */
+/* Mobile - 600px and below */
+@media (max-width: 600px) {
+  /* Hero */
+  .heroWrapper {
+    padding-inline: var(--mobile-gutter);
+  }
+
+  .heroLeft h1 {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: var(--space-lg);
+  }
+
+  .heroBody p {
+    font-size: 14px;
+  }
+
+  p.heroBody {
+    display: none;
+  }
+
+  p.heroBody.mobile {
+    display: block;
+  }
+
+  div.mobileQuickLinkWrap {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-xs);
+    justify-content: space-between;
+  }
+
+  span.section-label {
+    margin-bottom: var(--space-xs);
+  }
+
+  /* Featured Section - Maintain card layout */
+  .featured-wrapper {
+    padding: var(--space-lg) 0;
+  }
+
+  .projectImage {
+    gap: var(--space-lg);
+  }
+
+  .projectTitleContainer {
+    margin-bottom: var(--space-md);
+  }
+
+  .projectTitle {
+    font-size: 11px;
+  }
+
+  .projectCTA {
+    font-size: 11px;
+    padding: 0.4rem 1rem;
+  }
+
+  /* Resume */
+  .resume {
+    padding-top: var(--space-xl);
+    padding-bottom: 0;
+    padding-inline: var(--mobile-gutter);
+  }
+
+  .resume h2.h2Home {
+    font-size: 24px;
+    margin-bottom: var(--space-sm); /* 1rem - tighter for mobile */
+  }
+
+  .resumeCategoryHeader {
+    font-size: 20px;
+    margin-bottom: var(--space-xs); /* TIGHT after "Experience" and "Education" labels */
+  }
+
+  .resumeTitle {
+    margin-bottom: var(--space-xs); /* TIGHT after the section label container */
+  }
+
+  .resumeBlock {
+    margin-bottom: var(--space-lg); /* Space between Experience and Education */
+  }
+
+  .resumeBlock:last-child {
+    margin-bottom: 0;
+  }
+
+  .resumeBody {
+    gap: var(--space-md); /* Even tighter between items */
+  }
+
+  .resumeItem {
+    gap: var(--space-sm); /* Tighter within each item */
+  }
+
+  .jobTitle h4 {
+    font-size: 1rem;
+  }
+
+  .employer h5,
+  .institution h5 {
+    font-size: 12px;
+  }
+
+  .jobDescription p {
+    font-size: 0.7rem;
+    line-height: 160%;
+  }
+
+  /* Archive Section */
+  .archive-meta-bar {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    padding: var(--space-md) 0;
+    margin-bottom: var(--space-md);
+  }
+
+  .meta-large {
+    font-size: 2rem;
+  }
+
+  /* Quick links smaller */
+  .quickLink {
+    font-size: 11px;
+  }
+
+  .section-label {
+    font-size: 10px;
+  }
+}
+
+/* === 400px: Small mobile - ultra-compact === */
+/* Small Mobile - 400px and below */
+@media (max-width: 400px) {
+  .heroLeft h1 {
+  }
+
+  nav div.navColor {
+    padding: var(--space-xs);
+  }
+
+  .projectTitle {
+    font-size: 10px;
+  }
+
+  .resume h2.h2Home {
+    font-size: 20px;
+  }
+}
+
+/* Landscape Mobile Fix */
+@media (max-width: 900px) and (max-height: 500px) {
+  .heroWrapper {
+    min-height: auto;
+  }
+
+  .hero {
+    padding-bottom: var(--component-gap);
+  }
+}
