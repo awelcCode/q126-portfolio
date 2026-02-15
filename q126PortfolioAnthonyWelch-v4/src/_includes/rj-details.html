@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }} | Rejuvenation Index</title>
+    <link rel="stylesheet" href="/styleSheets/base.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="container" style="margin-top: var(--space-xl)">
+      <nav style="margin-bottom: var(--space-lg)">
+        <a
+          href="/rejuvenation"
+          style="
+            font-family: &quot;IBM Plex Mono&quot;, monospace;
+            font-size: 12px;
+            text-decoration: none;
+            color: var(--color-midGrey);
+          "
+          >← Back to Index</a
+        >
+      </nav>
+
+      <header
+        style="
+          border-bottom: 1px solid var(--color-lightGrey);
+          padding-bottom: var(--space-md);
+          margin-bottom: var(--space-lg);
+        "
+      >
+        <span class="quickLabel">{{ dept }}</span>
+        <h1
+          style="
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-block: var(--space-xs);
+          "
+        >
+          {{ title }}
+        </h1>
+        <div class="mono" style="color: var(--color-accent); font-weight: 600">
+          Outcome: {{ metric }}
+        </div>
+      </header>
+
+      <article class="bio-text" style="max-width: 65ch">{{ content }}</article>
+    </main>
+  </body>
+</html>
