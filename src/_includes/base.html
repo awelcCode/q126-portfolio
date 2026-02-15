@@ -4,13 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }} | Anthony Welch</title>
+
     <link rel="stylesheet" href="/styleSheets/base.css" />
+    <link rel="stylesheet" href="/styleSheets/rejuvenation.css" />
   </head>
   <body>
-    <nav></nav>
+    <nav class="container">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/rejuvenation">Rejuvenation</a>
+    </nav>
 
-    {{ content | safe}}
+    <main class="container">{{ content | safe }}</main>
 
-    <footer class="site-footer"></footer>
+    <footer class="container">
+      <p>&copy; 2026 Anthony Welch</p>
+    </footer>
+
+    <script src="/scripts/index.js"></script>
   </body>
 </html>
