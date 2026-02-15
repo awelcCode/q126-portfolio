@@ -105,16 +105,6 @@ nav {
   margin-inline: auto;
   padding-inline: 0;
   padding-top: var(--nav-padding-top);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: var(--color-lightestGrey);
-}
-
-/* Homepage nav is NOT sticky - it's inside the 100vh heroWrapper */
-.homepage-nav {
-  position: static;
-  background-color: transparent;
 }
 
 nav div.navColor {
@@ -188,8 +178,7 @@ nav div.navColor {
 .page-content,
 .about-wrapper,
 .project-body-wrapper,
-.project-hero,
-.rejuvenation-wrapper {
+.project-hero {
   width: 100%;
   max-width: var(--content-max-width);
   margin-inline: auto;
@@ -203,7 +192,7 @@ nav div.navColor {
   .about-wrapper,
   .project-body-wrapper,
   .project-hero,
-  .rejuvenation-wrapper {
+  .footer-container {
     padding-inline: var(--mobile-gutter);
   }
 }
@@ -224,7 +213,70 @@ nav div.navColor {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+}
+
+footer .name {
+  color: var(--color-dark);
+}
+
+/* --- BRANDING --- */
+
+.footer-brand {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+  letter-spacing: 0.01em;
+}
+
+.footer-name {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  color: var(--color-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.footer-title {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  color: var(--color-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+}
+
+/* --- LINKS --- */
+
+.footer-links {
+  display: flex;
+  gap: var(--component-gap);
+  flex-grow: 0;
+  text-transform: uppercase;
+  flex-direction: row; /* Always horizontal */
+  flex-wrap: nowrap; /* Never wrap */
+}
+
+nav.footer-links {
+  width: fit-content;
+  margin: 0; /* Remove all margins */
+  padding: 0; /* Remove all padding */
+}
+
+.link-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.link-label {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+  color: var(--color-text-medium);
+  margin-bottom: var(--space-xs);
 }
 
 .footer-link {
@@ -238,29 +290,6 @@ nav div.navColor {
 
 .footer-link:hover {
   color: var(--color-accent);
-}
-
-.footer-location {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 12px;
-  color: var(--color-midGrey);
-  letter-spacing: 0.01em;
-}
-
-/* === 1264px: Add padding === */
-@media (max-width: 1264px) {
-  .footer-container {
-    padding-inline: var(--mobile-gutter);
-  }
-}
-
-/* === 768px: Footer items stack === */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-sm);
-  }
 }
 
 /* === 768px: Footer stacks vertically, stays left-aligned === */
@@ -313,5 +342,28 @@ nav div.navColor {
 
   nav div.navColor {
     padding: var(--space-xs);
+  }
+}
+
+/* === 768px: Footer stacks vertically, stays left-aligned === */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: var(--space-lg) 0; /* Reduced from xl */
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start; /* Left-aligned when stacked */
+    gap: var(--space-md); /* Reduced from lg */
+  }
+  
+  .footer-brand {
+    gap: var(--space-sm); /* Tighter spacing on mobile */
+  }
+  
+  .footer-links {
+    gap: var(--space-md); /* Tighter gap on mobile but still horizontal */
+    margin-left: 0; /* Explicitly remove any inherited margin */
+    padding-left: 0; /* Explicitly remove any inherited padding */
   }
 }
