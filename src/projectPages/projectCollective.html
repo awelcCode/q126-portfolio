@@ -1,242 +1,189 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Collective | Anthony Welch</title>
+---
+layout: base.html
+title: Project Collective
+stylesheet: projectPage.css
+script: projectPage.js
+---
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
+<header class="project-hero">
+  <img
+    src="/images/projectPage/projectCollective/Project Collective Hero Mock Opt.png"
+    alt="Project Collective Rebrand Hero Image"
+  />
+</header>
 
-    <link rel="stylesheet" href="../styleSheets/base.css" />
-    <link rel="stylesheet" href="../styleSheets/projectPage.css" />
-  </head>
-  <body>
-    <nav>
-      <div class="navColor">
-        <div class="brand">
-          <div class="logoContainer">
-            <a href="../index.html"
-              ><img src="../images/navLogo.png" alt="Logo"
-            /></a>
-          </div>
-          <div class="brandWords">
-            <h5 class="name">Anthony Welch</h5>
-            <h5 class="niche">Visual Designer</h5>
-          </div>
-        </div>
-        <div class="menu">
-          <img src="../images/menu.svg" alt="menu icon" />
-        </div>
-      </div>
-    </nav>
+<main class="project-body-wrapper">
+  <aside class="project-nav-rail">
+    <a href="#intro" class="rail-item active">Intro</a>
+    <a href="#concepting" class="rail-item">Concepting</a>
+    <a href="#analysis" class="rail-item">Analysis</a>
+    <a href="#exploration" class="rail-item">Refining The Style</a>
+    <a href="#final-page" class="rail-item">Final Page</a>
+    <a href="#outcomes" class="rail-item">Outcomes</a>
+  </aside>
 
-    <header class="project-hero">
-      <img
-        src="../images/projectPage/projectCollective/Project Collective Hero Mock Opt.png"
-        alt="Project Collective Rebrand Hero Image"
-      />
-    </header>
+  <article class="story-content">
+    <section id="intro">
+      <span class="quickLabel">01. Project Intro</span>
+      <h1>Project Collective Rebrand</h1>
+      <p>
+        Project Collective is Rejuvenation's influencer partnership program,
+        spotlighting the creative voices who bring our products to life in
+        real spaces. I performed creative work for the rebrand of the landing
+        and partner pages, working closely with cross-functional partners to
+        elevate the visual narrative.
+      </p>
+      <p>
+        This project came from a functional request: <span class="marker-effect">to allow for multiple
+        featured projects per partner.</span>I introduced tabbed navigation to solve
+        this in a way that fit the current site style.
+      </p>
 
-    <main class="project-body-wrapper">
-
-              <aside class="project-nav-rail">
-        <a href="#intro" class="rail-item active">Intro</a>
-        <a href="#concepting" class="rail-item">Concepting</a>
-        <a href="#analysis" class="rail-item">Analysis</a>
-        <a href="#exploration" class="rail-item">Refining The Style</a>
-        <a href="#final-page" class="rail-item">Final Page</a>
-        <a href="#outcomes" class="rail-item">Outcomes</a>
-      </aside>
-
-        <article class="story-content">
-        <section id="intro">
-            <span class="quickLabel">01. Project Intro</span>
-            <h1>Project Collective Rebrand</h1>
-            <p>
-            Project Collective is Rejuvenation’s influencer partnership program,
-            spotlighting the creative voices who bring our products to life in
-            real spaces. I performed creative work for the rebrand of the landing
-            and partner pages, working closely with cross-functional partners to
-            elevate the visual narrative.
-            </p>
-            <p>
-            This project came from a functional request: <span class="marker-effect">to allow for multiple
-            featured projects per partner.</span>I introduced tabbed navigation to solve
-            this in a way that fit the current site style.
-            </p>
-
-            <div class="asset-flex-group">
-            <div>
-                <span class="caption">Original Page</span>
-                <img
-                src="../images/projectPage/projectCollective/ProbablyThisOriginal2x.jpg"
-                alt="Original Project Collective page"
-                />
-            </div>
-            <div>
-                <span class="caption">R1: Style consistent + tabbed nav</span>
-                <img
-                src="../images/projectPage/projectCollective/ProbablyThisNavigation2x.jpg"
-                alt="Round One Design"
-                />
-            </div>
-            </div>
-        </section>
-
-        <section id="concepting">
-            <span class="quickLabel">02. Concepting</span>
-            <h2>Bringing Our Very Best</h2>
-            <p>
-            As I was presenting, I could sense the group had appetite for something more. I had done some preliminary moodboards and wireframes around what I imagined Project Collective could feel like, inspired by a handwritten style in combination with editorial
-            elements to represent a creator's notes and inspiration.
-            </p>
-
-            <div class="vertical-stack-item">
-            <img
-                src="../images/projectPage/projectCollective/projectCollectiveExperimentationMoodboards01.06.25-opt.png"
-                class="img-full"
-                alt="Moodboards"
-            />
-            <span class="caption">Early project moodboards</span>
-            </div>
-
-            <div class="vertical-stack-item">
-            <img
-                src="../images/projectPage/projectCollective/projectCollectiveExperimentationWireframes01.06.25.png"
-                class="img-full"
-                alt="Wireframes"
-            />
-            <span class="caption">Early project wireframes</span>
-            </div>
-             <p><span class="marker-effect">The team responded positively to the directions,
-            approving an expanded scope from a minor update to a full visual and
-            experiential rebrand of the program. </span>
-            </p>
-        </section>
-
-        <section id="analysis">
-            <span class="quickLabel">03. Competitive Analysis</span>
-            <h2>Gathering Research and Other Strategies</h2>
-            <p>
-            Negina, Maria, and I researched competitor experiences. We noticed
-            that most other competitors did not brand their project partnerships
-            to this level. We were additionally encouraged by the human-first
-            designs presented by Lulu and Georgia and Ralph Lauren.
-            </p>
-            <div class="vertical-stack-item">
-            <img
-                src="../images/projectPage/projectCollective/competitiveAnalysis.png"
-                class="img-full"
-                alt="Analysis"
-            />
-            <span class="caption"
-                >Competitive Research: Lulu and Georgia vs. Ralph Lauren</span
-            >
-            </div>
-        </section>
-    
-
-        <section id="exploration">
-            <span class="quickLabel">04. Refining Our Direction</span>
-            <h2>Getting Over The Finish Line</h2>
-            <p>
-            In preparation for review, I addressed a licensing challenge by replacing
-            the previous Heatwood font, ultimately selecting Adobe Handwriting
-            Ernie for its balanced, handcrafted style.
-            </p>
-            <div class="vertical-stack-item">
-            <img
-                src="../images/projectPage/projectCollective/typeExploration.png"
-                class="img-full"
-                alt="Typography and Editorial Study"
-            />
-            <span class="caption"
-                >Typography and editorial layout exploration</span
-            >
-            </div>
-            <p>
-            Leadership were excited about the work, and we worked through minor edits with them, quieting down certain areas of the visual style.
-            </p>
-        </section>
-      </article>
-
-      <div class="full-bleed-dark" id="final-page">
-        <div class="media-container">
+      <div class="asset-flex-group">
+        <div>
+          <span class="caption">Original Page</span>
           <img
-            src="../images/projectPage/projectCollective/Project Collective Hero Mock Opt.png"
-            alt="Final Design Outcome Still"
+            src="/images/projectPage/projectCollective/ProbablyThisOriginal2x.jpg"
+            alt="Original Project Collective page"
+          />
+        </div>
+        <div>
+          <span class="caption">R1: Style consistent + tabbed nav</span>
+          <img
+            src="/images/projectPage/projectCollective/ProbablyThisNavigation2x.jpg"
+            alt="Round One Design"
           />
         </div>
       </div>
+    </section>
 
-      <article class="story-content">
-        <section id="outcomes">
-          <span class="quickLabel">05. Design Outcomes</span>
-          <h2>Stronger Alignment & Conversion</h2>
-          <p>
-            The final design successfully bridged the gap between collaborator
-            expertise and Rejuvenation’s "Project Authority" pillar. By
-            showcasing the unique voices of DIY tastemakers through handcrafted
-            moodboard elements, handwritten quotes, and personality-driven bios,
-            we transformed a standard landing page into a creative hub. This
-            editorial approach allows each partner's personality to shine while
-            maintaining a rigorous brand voice through consistent iconography
-            and refined typography.
-          </p>
+    <section id="concepting">
+      <span class="quickLabel">02. Concepting</span>
+      <h2>Bringing Our Very Best</h2>
+      <p>
+        As I was presenting, I could sense the group had appetite for something more. I had done some preliminary moodboards and wireframes around what I imagined Project Collective could feel like, inspired by a handwritten style in combination with editorial
+        elements to represent a creator's notes and inspiration.
+      </p>
 
-          <p>
-            Beyond aesthetics, the redesign prioritizes deeper community
-            engagement and conversion. We integrated dynamic project imagery and
-            shop-the-look calls-to-action that mirror the core site’s
-            sophisticated style, encouraging longer browsing sessions. By
-            celebrating the design process itself—rather than just the finished
-            room—the new Project Collective ecosystem inspires users to see
-            Rejuvenation not just as a retailer, but as a partner in their own
-            creative journey.
-          </p>
+      <div class="vertical-stack-item">
+        <img
+          src="/images/projectPage/projectCollective/projectCollectiveExperimentationMoodboards01.06.25-opt.png"
+          class="img-full"
+          alt="Moodboards"
+        />
+        <span class="caption">Early project moodboards</span>
+      </div>
 
-          <div class="asset-flex-group">
-            <div>
-              <span class="caption">Hub Page by Maria Watson</span>
-              <img
-                src="../images/projectPage/projectCollective/Project Collective Mocks Hub Opt.png"
-                alt="Hub Page"
-              />
-            </div>
-            <div>
-              <span class="caption">Social Assets by Lex Bianchi</span>
-              <img
-                src="../images/projectPage/projectCollective/projectCollectiveSocial125.png"
-                alt="Social Assets"
-              />
-            </div>
-          </div>
-        </section>
-      </article>
-    </main>
+      <div class="vertical-stack-item">
+        <img
+          src="/images/projectPage/projectCollective/projectCollectiveExperimentationWireframes01.06.25.png"
+          class="img-full"
+          alt="Wireframes"
+        />
+        <span class="caption">Early project wireframes</span>
+      </div>
+      <p><span class="marker-effect">The team responded positively to the directions,
+        approving an expanded scope from a minor update to a full visual and
+        experiential rebrand of the program. </span>
+      </p>
+    </section>
 
-    <footer class="site-footer">
-        <div class="footer-container">
-        <div class="footer-brand">
-          <h5 class="name">ANTHONY WELCH</h5>
-          <h5 class="niche">VISUAL DESIGNER</5>
+    <section id="analysis">
+      <span class="quickLabel">03. Competitive Analysis</span>
+      <h2>Gathering Research and Other Strategies</h2>
+      <p>
+        Negina, Maria, and I researched competitor experiences. We noticed
+        that most other competitors did not brand their project partnerships
+        to this level. We were additionally encouraged by the human-first
+        designs presented by Lulu and Georgia and Ralph Lauren.
+      </p>
+      <div class="vertical-stack-item">
+        <img
+          src="/images/projectPage/projectCollective/competitiveAnalysis.png"
+          class="img-full"
+          alt="Analysis"
+        />
+        <span class="caption"
+          >Competitive Research: Lulu and Georgia vs. Ralph Lauren</span
+        >
+      </div>
+    </section>
+
+    <section id="exploration">
+      <span class="quickLabel">04. Refining Our Direction</span>
+      <h2>Getting Over The Finish Line</h2>
+      <p>
+        In preparation for review, I addressed a licensing challenge by replacing
+        the previous Heatwood font, ultimately selecting Adobe Handwriting
+        Ernie for its balanced, handcrafted style.
+      </p>
+      <div class="vertical-stack-item">
+        <img
+          src="/images/projectPage/projectCollective/typeExploration.png"
+          class="img-full"
+          alt="Typography and Editorial Study"
+        />
+        <span class="caption"
+          >Typography and editorial layout exploration</span
+        >
+      </div>
+      <p>
+        Leadership were excited about the work, and we worked through minor edits with them, quieting down certain areas of the visual style.
+      </p>
+    </section>
+  </article>
+
+  <div class="full-bleed-dark" id="final-page">
+    <div class="media-container">
+      <img
+        src="/images/projectPage/projectCollective/Project Collective Hero Mock Opt.png"
+        alt="Final Design Outcome Still"
+      />
+    </div>
+  </div>
+
+  <article class="story-content">
+    <section id="outcomes">
+      <span class="quickLabel">05. Design Outcomes</span>
+      <h2>Stronger Alignment & Conversion</h2>
+      <p>
+        The final design successfully bridged the gap between collaborator
+        expertise and Rejuvenation's "Project Authority" pillar. By
+        showcasing the unique voices of DIY tastemakers through handcrafted
+        moodboard elements, handwritten quotes, and personality-driven bios,
+        we transformed a standard landing page into a creative hub. This
+        editorial approach allows each partner's personality to shine while
+        maintaining a rigorous brand voice through consistent iconography
+        and refined typography.
+      </p>
+
+      <p>
+        Beyond aesthetics, the redesign prioritizes deeper community
+        engagement and conversion. We integrated dynamic project imagery and
+        shop-the-look calls-to-action that mirror the core site's
+        sophisticated style, encouraging longer browsing sessions. By
+        celebrating the design process itself—rather than just the finished
+        room—the new Project Collective ecosystem inspires users to see
+        Rejuvenation not just as a retailer, but as a partner in their own
+        creative journey.
+      </p>
+
+      <div class="asset-flex-group">
+        <div>
+          <span class="caption">Hub Page by Maria Watson</span>
+          <img
+            src="/images/projectPage/projectCollective/Project Collective Mocks Hub Opt.png"
+            alt="Hub Page"
+          />
         </div>
-
-        <nav class="footer-links">
-            <a
-              href="https://www.linkedin.com/in/anthony-welch-26b5b3133"
-              target="_blank"
-              class="footer-link"
-              >LinkedIn</a
-            >
-            <a href="../about.html" class="footer-link">About</a>
-            <a href="../index.html" class="footer-link">Fun</a>
-        </nav>
+        <div>
+          <span class="caption">Social Assets by Lex Bianchi</span>
+          <img
+            src="/images/projectPage/projectCollective/projectCollectiveSocial125.png"
+            alt="Social Assets"
+          />
         </div>
-        </footer>
-    <script src="../scripts/projectPage.js"></script>
-  </body>
-</html>
+      </div>
+    </section>
+  </article>
+</main>

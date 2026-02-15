@@ -1,308 +1,244 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Anthony Welch | Visual Designer</title>
-    <link rel="stylesheet" href="./styleSheets/base.css" />
-    <link rel="stylesheet" href="./styleSheets/index.css" />
-    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://player.vimeo.com/api/player.js"></script>
-  </head>
-  <body>
-    <section class="heroWrapper">
-      <nav class="">
-        <div class="navColor">
-          <div class="brand">
-            <div class="logoContainer">
-              <img
-                src="images/navLogo.png"
-                alt="Anthony Welch's personal brand logo"
-              />
-            </div>
-            <div class="brandWords">
-              <h5 class="name">Anthony Welch</h5>
-              <h5 class="niche">Visual Designer</h5>
-            </div>
-          </div>
-          <div class="menu">
-            <div><img src="images/menu.svg" alt="menu icon" /></div>
-          </div>
-        </div>
-      </nav>
+---
+layout: base.html
+title: Visual Designer
+stylesheet: index.css
+script: index.js
+---
 
-      <div class="hero">
-        <div class="heroLeft">
-          <h1>
-            I design high-fidelity brand narratives and interactive product
-            tools—bridging the gap between editorial craft and technical
-            commerce.
-          </h1>
-          <div class="heroBody">
-            <p class="heroBody">
-              Currently creating web & digital experiences at Rejuvenation, a
-              Williams Sonoma brand in Portland, OR.
-            </p>
-            <p class="heroBody mobile">
-              Designing digital experiences at Rejuvenation, a Williams Sonoma
-              brand in Portland, OR.
-            </p>
-            <!--
-            <p class="heroBody">Hi, my name is Anthony.</p>
-            <p class="heroBody">
-              Currently at Rejuvenation (WSI), I focus on the intersection of
-              editorial storytelling and technical UI.
-            </p>
-            <p>
-              From immersive brand deep-dives to interactive product
-              visualizers, I build high-fidelity digital experiences that
-              translate heritage aesthetics into functional, modern commerce.
-            </p>
-          --></div>
+<section class="heroWrapper">
+  <div class="hero">
+    <div class="heroLeft">
+      <h1>
+        I design high-fidelity brand narratives and interactive product
+        tools—bridging the gap between editorial craft and technical
+        commerce.
+      </h1>
+      <div class="heroBody">
+        <p class="heroBody">
+          Currently creating web & digital experiences at Rejuvenation, a
+          Williams Sonoma brand in Portland, OR.
+        </p>
+        <p class="heroBody mobile">
+          Designing digital experiences at Rejuvenation, a Williams Sonoma
+          brand in Portland, OR.
+        </p>
+      </div>
+    </div>
+    <div class="heroRight">
+      <span class="section-label">Quick Start</span>
+      <div class="mobileQuickLinkWrap">
+        <a href="#featured" class="quickLink">01 — Featured Work</a>
+        <a href="#resume" class="quickLink">02 — Resume</a>
+        <a
+          href="https://www.linkedin.com/in/anthony-welch-26b5b3133"
+          class="quickLink"
+          target="_blank"
+          >03 — Connect</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="featured-wrapper">
+  <div class="sticky-view theme-plum" id="featured">
+    <div class="pageSectionMargin">
+      <div class="projectTitleContainer">
+        <h5 class="projectTitle" id="sticky-title">
+          Product Page Redesign, Rejuvenation
+        </h5>
+        <a class="projectCTA" id="sticky-link" href="#">Explore</a>
+      </div>
+
+      <div class="projectImage">
+        <div id="video-1" class="video-slot active">
+          <div style="padding: 61.88% 0 0 0; position: relative">
+            <iframe
+              src="https://player.vimeo.com/video/1163848307?badge=0&autopause=0&background=1&muted=1&autoplay=1&loop=1&controls=0&api=1&playsinline=1"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              "
+              playsinline
+            ></iframe>
+          </div>
         </div>
-        <div class="heroRight">
-          <span class="section-label">Quick Start</span>
-          <div class="mobileQuickLinkWrap">
-            <a href="#featured" class="quickLink">01 — Featured Work</a>
-            <a href="#resume" class="quickLink">02 — Resume</a>
-            <a
-              href="https://www.linkedin.com/in/anthony-welch-26b5b3133"
-              class="quickLink"
-              target="_blank"
-              >03 — Connect</a
-            >
+
+        <div id="video-2" class="video-slot">
+          <div style="padding: 61.88% 0 0 0; position: relative">
+            <iframe
+              src="https://player.vimeo.com/video/1163849532?badge=0&autopause=0&background=1&muted=1&autoplay=1&loop=1&controls=0&api=1&playsinline=1"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              "
+              playsinline
+            ></iframe>
+          </div>
+        </div>
+
+        <div id="video-3" class="video-slot">
+          <div style="padding: 61.88% 0 0 0; position: relative">
+            <iframe
+              src="https://player.vimeo.com/video/1163848557?badge=0&autopause=0&background=1&muted=1&autoplay=1&loop=1&controls=0&api=1&playsinline=1"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              "
+              playsinline
+            ></iframe>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <section class="featured-wrapper">
-      <div class="sticky-view theme-plum" id="featured">
-        <div class="pageSectionMargin">
-          <div class="projectTitleContainer">
-            <h5 class="projectTitle" id="sticky-title">
-              Product Page Redesign, Rejuvenation
-            </h5>
-            <a class="projectCTA" id="sticky-link" href="#">Explore</a>
-          </div>
+  <div class="project-trigger" data-id="1"></div>
+  <div class="project-trigger" data-id="2"></div>
+  <div class="project-trigger" data-id="3"></div>
+</section>
 
-          <div class="projectImage">
-            <div id="video-1" class="video-slot active">
-              <div style="padding: 61.88% 0 0 0; position: relative">
-                <iframe
-                  src="https://player.vimeo.com/video/1163848307?badge=0&autopause=0&background=1&muted=1&autoplay=1&loop=1&controls=0&api=1&playsinline=1"
-                  frameborder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  style="
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                  "
-                  playsinline
-                ></iframe>
-              </div>
-            </div>
+<!-- RESUME -->
+<section class="resume resume-header pageSectionMargin" id="resume">
+  <h2 class="h2Home">Qualifications</h2>
 
-            <div id="video-2" class="video-slot">
-              <div style="padding: 61.88% 0 0 0; position: relative">
-                <iframe
-                  src="https://player.vimeo.com/video/1163849532?badge=0&autopause=0&background=1&muted=1&autoplay=1&loop=1&controls=0&api=1&playsinline=1"
-                  frameborder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  style="
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                  "
-                  playsinline
-                ></iframe>
-              </div>
-            </div>
+  <article class="resumeBlock">
+    <div class="resumeTitle">
+      <span class="section-label"
+        ><h3 class="h3Home resumeCategoryHeader">Experience</h3></span
+      >
+    </div>
+    <div class="resumeBody">
+      <div class="resumeItem">
+        <div class="jobTitle">
+          <h4>Designer, Site Creative</h4>
+        </div>
+        <div class="employer">
+          <h5>Rejuvenation, Williams Sonoma</h5>
+          <h5>Dec. 2025–Present</h5>
+        </div>
+        <div class="jobDescription">
+          <p>
+            Executed the rebrand of Rejuvenation's Project Collective
+            influencer program, adding UI enhancements and a fully refreshed
+            visual system that aligned with brand strategy and elevated
+            partner storytelling.
+          </p>
+          <p>
+            Partnered with developers to improve product page UX by
+            implementing a dynamic, category-specific Finish Guide and
+            introducing mobile pagination for better discoverability.
+          </p>
+          <p>
+            Designed web, email, and social assets for a year-long campaign
+            in partnership with Benjamin Moore, extending core campaign
+            styling across multiple channels and touchpoints.
+          </p>
+          <p>
+            Maintained seasonal content across Rejuvenation's site,
+            including homepage modules, visual navigation, collection
+            imagery, and editorial content like Project Guides.
+          </p>
+          <p>
+            Built advanced prototypes to support new features, including an
+            interactive modular shelving tool—helping pave the way for
+            future product visualizers in high-impact categories.
+          </p>
+        </div>
+      </div>
+      <div class="resumeItem">
+        <div class="jobTitle">
+          <h4>Designer</h4>
+        </div>
+        <div class="employer">
+          <h5>Minga Fair Trade Imports</h5>
+          <h5>Feb. 2019–Nov. 2024</h5>
+        </div>
+        <div class="jobDescription">
+          <p>
+            Designed responsive webpages for B2B WordPress site, leveraged
+            technology to increase average order value by 75%.
+          </p>
+          <p>
+            Improved website performance by reducing load time by 2 seconds,
+            adhering to Google's recommendations for optimal speed and
+            efficiency.
+          </p>
+          <p>
+            Utilized Adobe After Effects to create animations and edit
+            videos that show customers how Minga positively impacts the
+            lives of its artisan partners.
+          </p>
+          <p>
+            Revitalized the email marketing strategy, executing over 300
+            email campaigns that achieved a consistent open rate of 30% and
+            sustaining revenue through the pandemic.
+          </p>
+          <p>
+            Established a comprehensive asset library, conceptualizing,
+            coordinating, and directing shoots in the United States,
+            Ecuador, and Perú.
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
 
-            <div id="video-3" class="video-slot">
-              <div style="padding: 61.88% 0 0 0; position: relative">
-                <iframe
-                  src="https://player.vimeo.com/video/1163848557?badge=0&autopause=0&background=1&muted=1&autoplay=1&loop=1&controls=0&api=1&playsinline=1"
-                  frameborder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  style="
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                  "
-                  playsinline
-                ></iframe>
-              </div>
-            </div>
+  <article class="resumeBlock">
+    <div class="resumeTitle">
+      <span class="section-label"
+        ><h3 class="h3Home resumeCategoryHeader">Education</h3></span
+      >
+    </div>
+    <div class="resumeBody">
+      <div class="resumeItem">
+        <div class="degreeTitle">
+          <h4>Associate of Arts, Digital Media Design</h4>
+        </div>
+        <div class="institution">
+          <h5>Madison Area Technical College</h5>
+        </div>
+        <div class="courseSubsection">
+          <h6>Relevant Courses:</h6>
+          <div class="courseContainer">
+            <p>Advanced UX/UI Design</p>
+            <p>Advanced Digital Design</p>
+            <p>Advanced Javascript</p>
+            <p>Introduction to Programming with Javascript</p>
+            <p>Web Development</p>
+            <p>Motion Design</p>
+            <p>Concept Development</p>
+            <p>Front End Web Design</p>
+            <p>Web Design</p>
           </div>
         </div>
       </div>
 
-      <div class="project-trigger" data-id="1"></div>
-      <div class="project-trigger" data-id="2"></div>
-      <div class="project-trigger" data-id="3"></div>
-    </section>
-
-    <!-- RESUME -->
-    <section class="resume resume-header pageSectionMargin" id="resume">
-      <h2 class="h2Home">Qualifications</h2>
-
-      <article class="resumeBlock">
-        <div class="resumeTitle">
-          <span class="section-label"
-            ><h3 class="h3Home resumeCategoryHeader">Experience</h3></span
-          >
+      <div class="resumeItem">
+        <div class="degreeTitle">
+          <h4>Bachelor of Arts, Spanish</h4>
         </div>
-        <div class="resumeBody">
-          <div class="resumeItem">
-            <div class="jobTitle">
-              <h4>Designer, Site Creative</h4>
-            </div>
-            <div class="employer">
-              <h5>Rejuvenation, Williams Sonoma</h5>
-              <h5>Dec. 2025–Present</h5>
-            </div>
-            <div class="jobDescription">
-              <p>
-                Executed the rebrand of Rejuvenation’s Project Collective
-                influencer program, adding UI enhancements and a fully refreshed
-                visual system that aligned with brand strategy and elevated
-                partner storytelling.
-              </p>
-              <p>
-                Partnered with developers to improve product page UX by
-                implementing a dynamic, category-specific Finish Guide and
-                introducing mobile pagination for better discoverability.
-              </p>
-              <p>
-                Designed web, email, and social assets for a year-long campaign
-                in partnership with Benjamin Moore, extending core campaign
-                styling across multiple channels and touchpoints.
-              </p>
-              <p>
-                Maintained seasonal content across Rejuvenation’s site,
-                including homepage modules, visual navigation, collection
-                imagery, and editorial content like Project Guides.
-              </p>
-              <p>
-                Built advanced prototypes to support new features, including an
-                interactive modular shelving tool—helping pave the way for
-                future product visualizers in high-impact categories.
-              </p>
-            </div>
-          </div>
-          <div class="resumeItem">
-            <div class="jobTitle">
-              <h4>Designer</h4>
-            </div>
-            <div class="employer">
-              <h5>Minga Fair Trade Imports</h5>
-              <h5>Feb. 2019–Nov. 2024</h5>
-            </div>
-            <div class="jobDescription">
-              <p>
-                Designed responsive webpages for B2B WordPress site, leveraged
-                technology to increase average order value by 75%.
-              </p>
-              <p>
-                Improved website performance by reducing load time by 2 seconds,
-                adhering to Google’s recommendations for optimal speed and
-                efficiency.
-              </p>
-              <p>
-                Utilized Adobe After Effects to create animations and edit
-                videos that show customers how Minga positively impacts the
-                lives of its artisan partners.
-              </p>
-              <p>
-                Revitalized the email marketing strategy, executing over 300
-                email campaigns that achieved a consistent open rate of 30% and
-                sustaining revenue through the pandemic.
-              </p>
-              <p>
-                Established a comprehensive asset library, conceptualizing,
-                coordinating, and directing shoots in the United States,
-                Ecuador, and Perú.
-              </p>
-            </div>
-          </div>
+        <div class="institution">
+          <h5>University of Wisconsin-La Crosse</h5>
         </div>
-      </article>
-
-      <article class="resumeBlock">
-        <div class="resumeTitle">
-          <span class="section-label"
-            ><h3 class="h3Home resumeCategoryHeader">Education</h3></span
-          >
-        </div>
-        <div class="resumeBody">
-          <div class="resumeItem">
-            <div class="degreeTitle">
-              <h4>Associate of Arts, Digital Media Design</h4>
-            </div>
-            <div class="institution">
-              <h5>Madison Area Technical College</h5>
-            </div>
-            <div class="courseSubsection">
-              <h6>Relevant Courses:</h6>
-              <div class="courseContainer">
-                <p>Advanced UX/UI Design</p>
-                <p>Advanced Digital Design</p>
-                <p>Advanced Javascript</p>
-                <p>Introduction to Programming with Javascript</p>
-                <p>Web Development</p>
-                <p>Motion Design</p>
-                <p>Concept Development</p>
-                <p>Front End Web Design</p>
-                <p>Web Design</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="resumeItem">
-            <div class="degreeTitle">
-              <h4>Bachelor of Arts, Spanish</h4>
-            </div>
-            <div class="institution">
-              <h5>University of Wisconsin-La Crosse</h5>
-            </div>
-          </div>
-        </div>
-      </article>
-    </section>
-    <footer class="site-footer">
-      <div class="footer-container">
-        <div class="footer-brand">
-          <h5 class="name">ANTHONY WELCH</h5>
-          <h5 class="niche">VISUAL DESIGNER</h5>
-        </div>
-
-        <nav class="footer-links">
-          <a
-            href="https://www.linkedin.com/in/anthony-welch-26b5b3133"
-            target="_blank"
-            class="footer-link"
-            >LinkedIn</a
-          >
-          <a href="about.html" class="footer-link">About</a>
-          <a href="index.html" class="footer-link">Fun</a>
-        </nav>
       </div>
-    </footer>
+    </div>
+  </article>
+</section>
 
-    <script src="scripts/index.js"></script>
-  </body>
-</html>
+<script src="https://player.vimeo.com/api/player.js"></script>

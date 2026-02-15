@@ -1,150 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Collective | Anthony Welch</title>
+---
+layout: base.html
+title: About
+stylesheet: about.css
+script: about.js
+---
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
+<main class="about-wrapper">
+  <section class="about-hero">
+    <span class="quickLabel">About Me</span>
+    <h1 class="hero-statement">
+      Designer, music lover, hiker, Portlander. <br />
+      Curious and resourceful, pessimistic yet infectiously enthusiastic.
+    </h1>
+  </section>
 
-    <link rel="stylesheet" href="styleSheets/base.css" />
-    <link rel="stylesheet" href="styleSheets/styleSheets/projectPage.css" />
-    <link rel="stylesheet" href="styleSheets/about.css" />
-  </head>
-  <body>
-    <nav>
-      <div class="navColor">
-        <div class="brand">
-          <div class="logoContainer">
-            <a href="index.html"><img src="images/navLogo.png" alt="Logo" /></a>
-          </div>
-          <div class="brandWords">
-            <h5 class="name">Anthony Welch</h5>
-            <h5 class="niche">Visual Designer</h5>
-          </div>
-        </div>
-        <div class="menu">
-          <img src="images/menu.svg" alt="menu icon" />
+  <section class="about-content">
+    <div class="bio-text">
+      <p class="intro-lead">
+        I'm a Portland-based Visual Designer specializing in the
+        intersection of brand identity and digital product experience.
+      </p>
+
+      <p>
+        Right now, I'm designing for Rejuvenation, a Williams-Sonoma brand,
+        where I work across site UI/UX, marketing campaigns, and digital
+        storytelling. Recent projects include refreshing the visual identity
+        of our influencer program and prototyping new shopping tools that
+        make complex configurations feel intuitive.
+      </p>
+
+      <p>
+        Before Rejuvenation, I spent nearly six years at a fair trade B2B
+        company where I worked on everything from responsive web design to
+        art direction for photoshoots in South America. I rehabilitated the
+        company image starting with the print catalog, refined the email
+        strategy, and leaned into motion design to help tell more compelling
+        stories about artisan partnerships.
+      </p>
+
+      <p>
+        I studied design at Madison Area Technical College, where I learned
+        from working professionals with decades of experience. Today, that
+        foundation helps me collaborate closely with developers and lead
+        design on complex builds—because I know what's possible, and how to
+        ask for it.
+      </p>
+    </div>
+
+    <div class="bio-media">
+      <div class="image-frame">
+        <img
+          id="about-gallery-img"
+          src="/images/about/tidepooling-opt.jpg"
+          data-caption="Tidepooling at Yaquina head in Newport, OR."
+          alt="Tidepooling in Oregon"
+        />
+
+        <span id="about-gallery-caption" class="image-caption">
+          Tidepooling at Yaquina head in Newport, OR.
+        </span>
+
+        <div class="pagination-dots">
+          <span
+            class="dot active"
+            data-index="0"
+            data-src="/images/about/tidepooling-opt.jpg"
+            data-caption="Tidepooling at Yaquina head in Newport, OR."
+          ></span>
+
+          <span
+            class="dot"
+            data-index="1"
+            data-src="/images/about/flowersOne-opt.jpg"
+            data-caption="A shimmery Portland afternoon."
+          ></span>
+
+          <span
+            class="dot"
+            data-index="2"
+            data-src="/images/about/band-opt.jpg"
+            data-caption="Playing in a Grateful Dead tribute band."
+          ></span>
+
+          <span
+            class="dot"
+            data-index="3"
+            data-src="/images/about/flowersTwo-opt.jpg"
+            data-caption="Exploring natural forms and macro details."
+          ></span>
+
+          <span
+            class="dot"
+            data-index="4"
+            data-src="/images/about/hiking-opt.jpg"
+            data-caption="Enjoying a hike in the Cascades."
+          ></span>
         </div>
       </div>
-    </nav>
-    <main class="about-wrapper">
-      <section class="about-hero">
-        <span class="quickLabel">About Me</span>
-        <h1 class="hero-statement">
-          Designer, music lover, hiker, Portlander. <br />
-          Curious and resourceful, pessimistic yet infectiously enthusiastic.
-        </h1>
-      </section>
-
-      <section class="about-content">
-        <div class="bio-text">
-          <p class="intro-lead">
-            I’m a Portland-based Visual Designer specializing in the
-            intersection of brand identity and digital product experience.
-          </p>
-
-          <p>
-            Right now, I’m designing for Rejuvenation, a Williams-Sonoma brand,
-            where I work across site UI/UX, marketing campaigns, and digital
-            storytelling. Recent projects include refreshing the visual identity
-            of our influencer program and prototyping new shopping tools that
-            make complex configurations feel intuitive.
-          </p>
-
-          <p>
-            Before Rejuvenation, I spent nearly six years at a fair trade B2B
-            company where I worked on everything from responsive web design to
-            art direction for photoshoots in South America. I rehabilitated the
-            company image starting with the print catalog, refined the email
-            strategy, and leaned into motion design to help tell more compelling
-            stories about artisan partnerships.
-          </p>
-
-          <p>
-            I studied design at Madison Area Technical College, where I learned
-            from working professionals with decades of experience. Today, that
-            foundation helps me collaborate closely with developers and lead
-            design on complex builds—because I know what’s possible, and how to
-            ask for it.
-          </p>
-        </div>
-
-        <div class="bio-media">
-          <div class="image-frame">
-            <img
-              id="about-gallery-img"
-              src="images/about/tidepooling-opt.jpg"
-              data-caption="Tidepooling at Yaquina head in Newport, OR."
-              alt="Tidepooling in Oregon"
-            />
-
-            <span id="about-gallery-caption" class="image-caption">
-              Tidepooling at Yaquina head in Newport, OR.
-            </span>
-
-            <div class="pagination-dots">
-              <span
-                class="dot active"
-                data-index="0"
-                data-src="images/about/tidepooling-opt.jpg"
-                data-caption="Tidepooling at Yaquina head in Newport, OR."
-              ></span>
-
-              <span
-                class="dot"
-                data-index="1"
-                data-src="images/about/flowersOne-opt.jpg"
-                data-caption="A shimmery Portland afternoon."
-              ></span>
-
-              <span
-                class="dot"
-                data-index="2"
-                data-src="images/about/band-opt.jpg"
-                data-caption="Playing in a Grateful Dead tribute band."
-              ></span>
-
-              <span
-                class="dot"
-                data-index="3"
-                data-src="images/about/flowersTwo-opt.jpg"
-                data-caption="Exploring natural forms and macro details."
-              ></span>
-
-              <span
-                class="dot"
-                data-index="4"
-                data-src="images/about/hiking-opt.jpg"
-                data-caption="Enjoying a hike in the Cascades."
-              ></span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="site-footer">
-      <div class="footer-container">
-        <div class="footer-brand">
-          <h5 class="name">ANTHONY WELCH</h5>
-          <h5 class="niche">VISUAL DESIGNER</h5>
-        </div>
-
-        <nav class="footer-links">
-          <a
-            href="https://www.linkedin.com/in/anthony-welch-26b5b3133"
-            target="_blank"
-            class="footer-link"
-            >LinkedIn</a
-          >
-          <a href="about.html" class="footer-link">About</a>
-          <a href="index.html" class="footer-link">Fun</a>
-        </nav>
-      </div>
-    </footer>
-    <script src="scripts/about.js"></script>
-  </body>
-</html>
+    </div>
+  </section>
+</main>

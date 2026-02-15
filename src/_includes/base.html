@@ -1,26 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }} | Anthony Welch</title>
 
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="/styleSheets/base.css" />
-    <link rel="stylesheet" href="/styleSheets/rejuvenation.css" />
+    {% if stylesheet %}
+    <link rel="stylesheet" href="/styleSheets/{{ stylesheet }}" />
+    {% endif %}
   </head>
   <body>
-    <nav class="container">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/rejuvenation">Rejuvenation</a>
+    <nav>
+      <div class="navColor">
+        <div class="brand">
+          <div class="logoContainer">
+            <a href="/"><img src="/images/navLogo.png" alt="Logo" /></a>
+          </div>
+          <div class="brandWords">
+            <h5 class="name">Anthony Welch</h5>
+            <h5 class="niche">Visual Designer</h5>
+          </div>
+        </div>
+        <div class="menu">
+          <img src="/images/menu.svg" alt="menu icon" />
+        </div>
+      </div>
     </nav>
 
-    <main class="container">{{ content | safe }}</main>
+    {{ content | safe }}
 
-    <footer class="container">
-      <p>&copy; 2026 Anthony Welch</p>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h5 class="name">ANTHONY WELCH</h5>
+          <h5 class="niche">VISUAL DESIGNER</h5>
+        </div>
+
+        <nav class="footer-links">
+          <a
+            href="https://www.linkedin.com/in/anthony-welch-26b5b3133"
+            target="_blank"
+            class="footer-link"
+            >LinkedIn</a
+          >
+          <a href="/about" class="footer-link">About</a>
+          <a href="/" class="footer-link">Home</a>
+        </nav>
+      </div>
     </footer>
 
-    <script src="/scripts/index.js"></script>
+    {% if script %}
+    <script src="/scripts/{{ script }}"></script>
+    {% endif %}
   </body>
 </html>
