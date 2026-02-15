@@ -178,7 +178,8 @@ nav div.navColor {
 .page-content,
 .about-wrapper,
 .project-body-wrapper,
-.project-hero {
+.project-hero,
+.rejuvenation-wrapper {
   width: 100%;
   max-width: var(--content-max-width);
   margin-inline: auto;
@@ -192,6 +193,7 @@ nav div.navColor {
   .about-wrapper,
   .project-body-wrapper,
   .project-hero,
+  .rejuvenation-wrapper,
   .footer-container {
     padding-inline: var(--mobile-gutter);
   }
