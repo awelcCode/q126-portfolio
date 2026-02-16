@@ -1,0 +1,61 @@
+---
+layout: base.html
+title: Rejuvenation Index
+stylesheet: rj-index.css
+---
+
+<main class="rejuvenation-wrapper">
+  <section class="about-hero">
+    <span class="quickLabel">Work Log: 2023–2025</span>
+    <h1 class="hero-statement">My Time At Rejuvenation</h1>
+  </section>
+
+  <section class="rj-index-table">
+    <div class="rj-header-row">
+      <span>ID</span>
+      <span>Project</span>
+      <span>Summary</span>
+      <span>Metrics / Outcome</span>
+      <span></span>
+    </div>
+
+    <div class="rj-table-body">
+      {% for project in rjProjects.projects %}
+      <div class="rj-row">
+        <span class="rj-id">{{ project.id }}</span>
+
+        <div class="rj-main-info">
+          {% if project.page %}
+          <a href="/rj-work/{{ project.slug }}/" class="rj-project-name rj-project-link">{{ project.name }}</a>
+          <span class="rj-category">{{ project.category }}</span>
+          {% else %}
+          <span class="rj-project-name">{{ project.name }}</span>
+          <span class="rj-category">{{ project.category }}</span>
+          {% endif %}
+        </div>
+
+        <span class="rj-summary">{{ project.oneLine }}</span>
+
+        <div class="rj-metrics">
+          {% for metric in project.metrics %}
+          <div class="rj-metric-item">
+            <span class="rj-metric-value">{{ metric.value }}</span>
+            <span class="rj-metric-label">{{ metric.label }}</span>
+          </div>
+          {% else %}
+          <span class="rj-internal-tool">Internal Tool</span>
+          {% endfor %}
+        </div>
+
+        <div class="rj-action">
+          {% if project.page %}
+          <a href="/rj-work/{{ project.slug }}/" class="rj-case-link">READ CASE</a>
+          {% else %}
+          <span class="rj-logged">LOGGED</span>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</main>

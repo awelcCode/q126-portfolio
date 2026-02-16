@@ -1,0 +1,232 @@
+/* ============================================================
+   REJUVENATION PROJECT PAGES
+   Individual project detail pages with sticky info + image river
+   ============================================================ */
+
+/* Project Hero */
+.rj-project-hero {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  padding-inline: 0;
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-2xl);
+}
+
+.rj-project-hero .quickLabel {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-midGrey);
+  margin-bottom: var(--space-sm);
+}
+
+.rj-project-hero .hero-statement {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--color-dark);
+  max-width: 60ch;
+  margin: 0;
+}
+
+/* Project Content Wrapper */
+.rj-project-wrapper {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  padding-inline: 0;
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: var(--component-gap);
+  padding-bottom: var(--space-2xl);
+  align-items: start;
+}
+
+/* Left: Sticky Project Info */
+.project-info {
+  position: sticky;
+  top: calc(var(--nav-padding-top) + 80px); /* Below nav */
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.info-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-midGrey);
+  font-weight: 400;
+  margin: 0;
+}
+
+.info-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-dark);
+  margin: 0;
+}
+
+.info-impact {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-accent);
+  margin: 0;
+}
+
+.metrics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info-metric {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-dark);
+  margin: 0;
+}
+
+.info-metric strong {
+  color: var(--color-midGrey);
+  font-weight: 500;
+}
+
+.back-link {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-midGrey);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--color-dark);
+}
+
+/* Right: Image River (Desktop) */
+.project-images {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.image-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Mobile: Horizontal Scroll Images */
+.project-images-mobile {
+  display: none;
+}
+
+/* === 1264px: Add padding for medium screens === */
+@media (max-width: 1264px) {
+  .rj-project-hero,
+  .rj-project-wrapper {
+    padding-inline: var(--mobile-gutter);
+  }
+}
+
+/* === 900px: Collapse to mobile layout === */
+@media (max-width: 900px) {
+  .rj-project-hero {
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-lg);
+  }
+
+  .rj-project-wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  /* Hide desktop image river */
+  .project-images {
+    display: none;
+  }
+
+  /* Show mobile horizontal scroll */
+  .project-images-mobile {
+    display: flex;
+    gap: var(--space-sm);
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-bottom: var(--space-sm);
+    margin-inline: calc(var(--mobile-gutter) * -1); /* Full width */
+    padding-inline: var(--mobile-gutter);
+    order: -1; /* Move images above info */
+  }
+
+  .mobile-image-container {
+    flex: 0 0 85%; /* 85% width for each image */
+    scroll-snap-align: start;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .mobile-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Info no longer sticky on mobile */
+  .project-info {
+    position: static;
+    gap: var(--space-md);
+  }
+
+  .info-text {
+    font-size: 14px;
+  }
+
+  .info-impact {
+    font-size: 16px;
+  }
+}
+
+/* === 600px: Tighter spacing === */
+@media (max-width: 600px) {
+  .rj-project-hero {
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-md);
+  }
+
+  .rj-project-hero .hero-statement {
+    font-size: 24px;
+  }
+
+  .rj-project-wrapper {
+    gap: var(--space-md);
+    padding-bottom: var(--space-xl);
+  }
+
+  .project-info {
+    gap: var(--space-sm);
+  }
+
+  .mobile-image-container {
+    flex: 0 0 90%; /* Larger on small screens */
+  }
+}

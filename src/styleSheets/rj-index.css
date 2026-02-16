@@ -80,6 +80,19 @@
   font-weight: 700;
   font-size: 14px;
   color: var(--color-dark);
+}
+
+.rj-project-link {
+  text-decoration: none;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.rj-project-link:hover {
+  color: var(--color-accent);
+}
+  font-size: 14px;
+  color: var(--color-dark);
   display: block;
   line-height: 1.3;
 }

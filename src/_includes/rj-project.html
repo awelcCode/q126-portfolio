@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ project.title }} | Anthony Welch</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/styleSheets/base.css" />
+    <link rel="stylesheet" href="/styleSheets/rj-project.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="navColor">
+        <div class="brand">
+          <div class="logoContainer">
+            <a href="/"><img src="/images/navLogo.png" alt="Anthony Welch" /></a>
+          </div>
+          <div class="brandWords">
+            <h5 class="name">Anthony Welch</h5>
+            <h5 class="niche desktop-only">Visual Designer</h5>
+          </div>
+        </div>
+
+        <!-- Desktop Menu Buttons -->
+        <div class="nav-buttons desktop-only">
+          <button class="nav-btn" data-dropdown="featured">FEATURED WORK</button>
+          <button class="nav-btn" data-dropdown="extras">EXTRAS</button>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button class="hamburger mobile-only" aria-label="Toggle menu">
+          <img src="/images/menu.svg" alt="Open menu" class="hamburger-open" />
+          <img src="/images/close.svg" alt="Close menu" class="hamburger-close" />
+        </button>
+      </div>
+
+      <!-- Dropdown Panel -->
+      <div class="nav-dropdown" data-dropdown-content>
+        <!-- Featured Work View -->
+        <div class="dropdown-view" data-view="featured">
+          <div class="featured-grid">
+            <a href="/projectPages/buyBox" class="featured-card">
+              <h5 class="card-title">Product Page Redesign</h5>
+              <p class="card-description">Redesigned complex lighting configuration to improve conversion.</p>
+            </a>
+            <a href="https://www.youtube.com/watch?v=HmW7Dp1DpMk" class="featured-card" target="_blank">
+              <h5 class="card-title">Circuit Logo Animation <span class="card-meta">(OPENS YOUTUBE)</span></h5>
+              <p class="card-description">Practicing motion, creating an engaging animation.</p>
+            </a>
+            <a href="/projectPages/projectCollective" class="featured-card">
+              <h5 class="card-title">Project Collective</h5>
+              <p class="card-description">Redesigning Rejuvenation's interior designer collaboration program.</p>
+            </a>
+          </div>
+        </div>
+
+        <!-- Extras View -->
+        <div class="dropdown-view" data-view="extras">
+          <div class="extras-list">
+            <a href="/about" class="extras-link">ABOUT</a>
+            <a href="/#resume" class="extras-link">RESUME</a>
+            <a href="/rejuvenation" class="extras-link">MY TIME AT REJUVENATION</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <div class="rj-project-hero">
+      <span class="quickLabel">Rejuvenation</span>
+      <h1 class="hero-statement">{{ project.name }}</h1>
+    </div>
+
+    <!-- Project Content -->
+    <div class="rj-project-wrapper">
+      <!-- Left: Sticky Info -->
+      <div class="project-info">
+        <div class="info-section">
+          <h3 class="info-label">Overview</h3>
+          <p class="info-text">{{ project.summary }}</p>
+        </div>
+
+        {% if project.metrics.length > 0 %}
+        <div class="info-section">
+          <h3 class="info-label">Impact</h3>
+          <div class="metrics-list">
+            {% for metric in project.metrics %}
+            <p class="info-metric"><strong>{{ metric.label }}:</strong> {{ metric.value }}</p>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        <div class="info-section">
+          <a href="/rejuvenation" class="back-link">← Back to All Work</a>
+        </div>
+      </div>
+
+      <!-- Right: Image River (Desktop) -->
+      <div class="project-images">
+        {% if project.images.hero %}
+        <div class="image-container">
+          <img src="{{ project.images.hero }}" alt="{{ project.name }} - Hero" />
+        </div>
+        {% endif %}
+        {% for image in project.images.gallery %}
+        <div class="image-container">
+          <img src="{{ image }}" alt="{{ project.name }} - Image {{ loop.index }}" />
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Mobile: Horizontal Scroll Images -->
+      <div class="project-images-mobile">
+        {% if project.images.hero %}
+        <div class="mobile-image-container">
+          <img src="{{ project.images.hero }}" alt="{{ project.name }} - Hero" />
+        </div>
+        {% endif %}
+        {% for image in project.images.gallery %}
+        <div class="mobile-image-container">
+          <img src="{{ image }}" alt="{{ project.name }} - Image {{ loop.index }}" />
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <a
+          href="https://www.linkedin.com/in/anthony-welch-26b5b3133"
+          target="_blank"
+          class="footer-link"
+          >LinkedIn</a
+        >
+        <span class="footer-location">Made in Portland, OR</span>
+      </div>
+    </footer>
+
+    <!-- Global Nav Script -->
+    <script src="/scripts/nav-global.js"></script>
+  </body>
+</html>
