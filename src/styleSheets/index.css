@@ -107,6 +107,7 @@ h1 {
   margin-bottom: var(--space-lg);
   letter-spacing: -0.02em;
   color: var(--color-dark);
+  max-width: 60ch; /* Prevent overly long lines at medium widths */
 }
 
 .heroRight {
@@ -358,9 +359,7 @@ iframe {
 }
 
 .resumeBlock {
-  margin-bottom: var(
-    --space-lg
-  ); /* Reduced from xl to avoid excessive compounding */
+  margin-bottom: var(--space-lg); /* Reduced from xl to avoid excessive compounding */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: var(--component-gap);
@@ -526,7 +525,7 @@ section.allWork {
   .hero {
     grid-template-columns: 1fr;
     gap: var(--component-gap);
-    padding: 0 0 var(--space-xl) 0; /* Match featured and resume section spacing */
+    padding-bottom: var(--space-xl); /* Set bottom padding without removing horizontal */
   }
 
   .heroLeft {
@@ -627,9 +626,7 @@ section.allWork {
   .resumeBlock {
     grid-template-columns: 1fr;
     gap: 0; /* Remove gap - we'll use margins instead */
-    margin-bottom: var(
-      --space-lg
-    ); /* Space between Experience and Education blocks */
+    margin-bottom: var(--space-lg); /* Space between Experience and Education blocks */
   }
 
   .resumeBlock:last-child {
@@ -644,17 +641,13 @@ section.allWork {
   }
 
   .resumeCategoryHeader {
-    margin-bottom: var(
-      --space-xs
-    ); /* TIGHT after Experience/Education headings */
+    margin-bottom: var(--space-xs); /* TIGHT after Experience/Education headings */
   }
 
   .resumeBody {
     grid-column: 1 / -1;
     max-width: 100%;
-    gap: var(
-      --space-md
-    ); /* Reasonable gap between resume items - was component-gap */
+    gap: var(--space-md); /* Reasonable gap between resume items - was component-gap */
   }
 
   .resume-sticky {
@@ -748,21 +741,15 @@ section.allWork {
 
   .resumeCategoryHeader {
     font-size: 20px;
-    margin-bottom: var(
-      --space-xs
-    ); /* TIGHT after "Experience" and "Education" labels */
+    margin-bottom: var(--space-xs); /* TIGHT after "Experience" and "Education" labels */
   }
 
   .resumeTitle {
-    margin-bottom: var(
-      --space-xs
-    ); /* TIGHT after the section label container */
+    margin-bottom: var(--space-xs); /* TIGHT after the section label container */
   }
 
   .resumeBlock {
-    margin-bottom: var(
-      --space-sm
-    ); /* Minimal space between Experience and Education */
+    margin-bottom: var(--space-sm); /* Minimal space between Experience and Education */
   }
 
   .resumeBlock:last-child {
@@ -770,7 +757,7 @@ section.allWork {
   }
 
   .resumeBody {
-    gap: var(--space-sm); /* 1rem spacing between resume items */
+    gap: var(--space-xs); /* 1rem spacing between resume items */
   }
 
   .resumeItem {
@@ -821,10 +808,6 @@ section.allWork {
 /* Small Mobile - 400px and below */
 @media (max-width: 400px) {
   .heroLeft h1 {
-  }
-
-  nav div.navColor {
-    padding: var(--space-xs);
   }
 
   .projectTitle {

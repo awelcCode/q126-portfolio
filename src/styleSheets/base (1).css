@@ -108,22 +108,11 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Hide nav when scrolling down */
-nav.nav-hidden {
-  transform: translateY(-100%);
 }
 
 /* Homepage nav is NOT sticky - it's inside the 100vh heroWrapper */
 .homepage-nav {
   position: static;
-}
-
-/* Homepage nav doesn't auto-hide since it's not sticky */
-.homepage-nav.nav-hidden {
-  transform: none;
 }
 
 /* Give homepage nav padding on larger screens */
@@ -149,22 +138,11 @@ nav div.navColor {
 
 /* Desktop/Mobile Visibility Helpers */
 .desktop-only {
-  display: inherit;
+  display: block;
 }
 
 .mobile-only {
   display: none;
-}
-
-/* Ensure desktop items show above 900px */
-@media (min-width: 901px) {
-  .desktop-only {
-    display: inherit !important;
-  }
-
-  .mobile-only {
-    display: none !important;
-  }
 }
 
 /* Nav Buttons Container (Desktop) */
@@ -182,53 +160,62 @@ nav div.navColor {
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s ease;
-  border: 1px solid var(--color-midGrey);
-  background-color: transparent;
-  color: var(--color-lightGrey);
+  border: 1px solid transparent;
+  background: none;
 }
 
-.nav-btn:hover,
-.nav-btn.active {
-  background-color: rgba(255, 255, 255, 0.1);
+.nav-btn-filled {
+  background-color: var(--color-midGrey);
+  color: var(--color-dark);
+  border-color: var(--color-midGrey);
+}
+
+.nav-btn-filled:hover,
+.nav-btn-filled.active {
+  background-color: var(--color-lightGrey);
+  border-color: var(--color-lightGrey);
+}
+
+.nav-btn-outlined {
+  background-color: transparent;
+  color: var(--color-lightGrey);
+  border-color: var(--color-midGrey);
+}
+
+.nav-btn-outlined:hover,
+.nav-btn-outlined.active {
   color: var(--color-white);
   border-color: var(--color-lightGrey);
-  border-radius: 8px;
 }
 
 /* Hamburger Menu (Mobile) */
 .hamburger {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
   background: none;
   border: none;
   cursor: pointer;
   padding: 4px;
-  width: 28px;
-  height: 28px;
-  position: relative;
 }
 
-.hamburger img {
+.hamburger span {
   width: 20px;
-  height: 20px;
-  transition: opacity 0.2s ease;
+  height: 2px;
+  background-color: var(--color-lightGrey);
+  transition: all 0.3s ease;
 }
 
-.hamburger .hamburger-open {
-  display: block;
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(6px);
 }
 
-.hamburger .hamburger-close {
-  display: none;
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
 }
 
-.hamburger.active .hamburger-open {
-  display: none;
-}
-
-.hamburger.active .hamburger-close {
-  display: block;
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-6px);
 }
 
 /* Dropdown Panel */
@@ -259,32 +246,26 @@ nav div.navColor {
   display: block;
 }
 
-/* Featured Work Grid - Add back separator lines */
+/* Featured Work Grid */
 .featured-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  background-color: rgba(255, 255, 255, 0.1); /* Separator lines show through gap */
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .featured-card {
   background-color: var(--color-dark);
   padding: var(--space-md);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease;
   text-decoration: none;
   display: block;
   color: inherit;
-  border-radius: 0; /* Square by default so separator shows */
-  border: 1px solid transparent;
 }
 
 .featured-card:hover {
   background-color: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.1);
-  border-radius: 8px; /* Rounded on hover */
-  position: relative;
-  z-index: 1; /* Lift above grid to show rounded corners */
 }
 
 .card-title {
@@ -312,36 +293,25 @@ nav div.navColor {
   font-weight: 300;
 }
 
-/* Extras List - Horizontal Row with separators */
+/* Extras List */
 .extras-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background-color: rgba(255, 255, 255, 0.1); /* Separator lines show through gap */
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
 }
 
 .extras-link {
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--color-lightGrey);
+  color: var(--color-midGrey);
   text-decoration: none;
-  transition: all 0.2s ease;
-  padding: var(--space-md);
-  background-color: var(--color-dark);
-  display: block;
-  text-align: center;
-  border-radius: 0; /* Square by default so separator shows */
-  border: 1px solid transparent;
+  transition: color 0.2s ease;
+  padding: var(--space-xs) 0;
 }
 
 .extras-link:hover {
   color: var(--color-white);
-  background-color: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.1);
-  border-radius: 8px; /* Rounded on hover */
-  position: relative;
-  z-index: 1; /* Lift above grid to show rounded corners */
 }
 
 .brand {
@@ -492,68 +462,31 @@ nav div.navColor {
 
   /* Mobile Nav Dropdown Styles */
   .desktop-only {
-    display: none !important;
+    display: none;
   }
 
   .mobile-only {
-    display: flex !important;
-  }
-
-  .nav-dropdown {
-    padding: var(--space-sm) 0; /* Vertical padding only */
+    display: flex;
   }
 
   .nav-dropdown.active {
-    max-height: 800px;
+    max-height: 600px;
   }
 
   /* Mobile: Stack Featured Work */
   .featured-grid {
     grid-template-columns: 1fr;
-    gap: 4px; /* Tighter gap - was 8px */
-    background-color: transparent; /* Remove separator on mobile */
-  }
-
-  .featured-card {
-    padding: var(--space-sm) var(--mobile-gutter); /* Match nav padding */
-    border-radius: 0; /* Remove rounded corners on mobile for edge-to-edge */
-  }
-
-  .card-title {
-    font-size: 11px;
-    margin-bottom: 4px;
-  }
-
-  .card-description {
-    font-size: 11px;
-    line-height: 1.4;
-  }
-
-  /* Mobile: Stack Extras */
-  .extras-list {
-    grid-template-columns: 1fr;
-    gap: 4px; /* Tighter gap - was 8px */
-    background-color: transparent; /* Remove separator on mobile */
-  }
-
-  .extras-link {
-    text-align: left;
-    padding: var(--space-sm) var(--mobile-gutter); /* Match nav padding */
-    font-size: 11px;
-    border-radius: 0; /* Remove rounded corners on mobile for edge-to-edge */
   }
 
   /* Mobile: Show section headers */
   .dropdown-view[data-view="featured"]::before,
   .dropdown-view[data-view="extras"]::before {
     display: block;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-size: 14px;
+    text-transform: capitalize;
     color: var(--color-white);
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-md);
     font-weight: 400;
-    padding: 0 var(--mobile-gutter); /* Match nav padding */
   }
 
   .dropdown-view[data-view="featured"]::before {
@@ -570,9 +503,7 @@ nav div.navColor {
   }
 
   .dropdown-view + .dropdown-view {
-    margin-top: var(--space-md);
-    padding-top: var(--space-md);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: var(--space-lg);
   }
 }
 

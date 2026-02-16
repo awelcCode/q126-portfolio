@@ -20,15 +20,54 @@
       <div class="navColor">
         <div class="brand">
           <div class="logoContainer">
-            <a href="/"><img src="/images/navLogo.png" alt="Logo" /></a>
+            <a href="/"><img src="/images/navLogo.png" alt="Anthony Welch" /></a>
           </div>
           <div class="brandWords">
             <h5 class="name">Anthony Welch</h5>
-            <h5 class="niche">Visual Designer</h5>
+            <h5 class="niche desktop-only">Visual Designer</h5>
           </div>
         </div>
-        <div class="menu">
-          <img src="/images/menu.svg" alt="menu icon" />
+
+        <!-- Desktop Menu Buttons -->
+        <div class="nav-buttons desktop-only">
+          <button class="nav-btn" data-dropdown="featured">FEATURED WORK</button>
+          <button class="nav-btn" data-dropdown="extras">EXTRAS</button>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button class="hamburger mobile-only" aria-label="Toggle menu">
+          <img src="/images/menu.svg" alt="Open menu" class="hamburger-open" />
+          <img src="/images/close.svg" alt="Close menu" class="hamburger-close" />
+        </button>
+      </div>
+
+      <!-- Dropdown Panel -->
+      <div class="nav-dropdown" data-dropdown-content>
+        <!-- Featured Work View -->
+        <div class="dropdown-view" data-view="featured">
+          <div class="featured-grid">
+            <a href="/projectPages/buyBox" class="featured-card">
+              <h5 class="card-title">Product Page Redesign</h5>
+              <p class="card-description">Redesigned complex lighting configuration to improve conversion.</p>
+            </a>
+            <a href="https://www.youtube.com/watch?v=HmW7Dp1DpMk" class="featured-card" target="_blank">
+              <h5 class="card-title">Circuit Logo Animation <span class="card-meta">(OPENS YOUTUBE)</span></h5>
+              <p class="card-description">Practicing motion, creating an engaging animation.</p>
+            </a>
+            <a href="/projectPages/projectCollective" class="featured-card">
+              <h5 class="card-title">Project Collective</h5>
+              <p class="card-description">Redesigning Rejuvenation's interior designer collaboration program.</p>
+            </a>
+          </div>
+        </div>
+
+        <!-- Extras View -->
+        <div class="dropdown-view" data-view="extras">
+          <div class="extras-list">
+            <a href="/about" class="extras-link">ABOUT</a>
+            <a href="/#resume" class="extras-link">RESUME</a>
+            <a href="/rejuvenation" class="extras-link">MY TIME AT REJUVENATION</a>
+          </div>
         </div>
       </div>
     </nav>
@@ -47,6 +86,9 @@
       </div>
     </footer>
 
+    <!-- Global Nav Script -->
+    <script src="/scripts/nav-global.js"></script>
+    
     {% if script %}
     <script src="/scripts/{{ script }}"></script>
     {% endif %}
