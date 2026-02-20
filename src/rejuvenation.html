@@ -6,7 +6,7 @@ stylesheet: rj-index.css
 
 <main class="rejuvenation-wrapper">
   <section class="about-hero">
-    <span class="quickLabel">Work Log: 2023–2025</span>
+    <span class="quickLabel">An Expanded List</span>
     <h1 class="hero-statement">My Time At Rejuvenation</h1>
   </section>
 
@@ -25,7 +25,11 @@ stylesheet: rj-index.css
         <span class="rj-id">{{ project.id }}</span>
 
         <div class="rj-main-info">
+          {% if project.page %}
+          <a href="/rj-work/{{ project.slug }}/" class="rj-project-name rj-project-link">{{ project.name }}</a>
+          {% else %}
           <span class="rj-project-name">{{ project.name }}</span>
+          {% endif %}
           <span class="rj-category">{{ project.category }}</span>
         </div>
 
@@ -35,16 +39,14 @@ stylesheet: rj-index.css
           {% for metric in project.metrics %}
           <div class="rj-metric-item">
             <span class="rj-metric-value">{{ metric.value }}</span>
-            <span class="rj-metric-label">{{ metric.label }}</span>
+            {% if metric.label != "Outcome" %}<span class="rj-metric-label">{{ metric.label }}</span>{% endif %}
           </div>
-          {% else %}
-          <span class="rj-internal-tool">Internal Tool</span>
           {% endfor %}
         </div>
 
         <div class="rj-action">
           {% if project.page %}
-          <a href="/projectPages/{{ project.slug }}" class="rj-case-link">READ CASE</a>
+          <a href="/rj-work/{{ project.slug }}/" class="rj-case-link">READ CASE</a>
           {% else %}
           <span class="rj-logged">LOGGED</span>
           {% endif %}

@@ -6,7 +6,7 @@ stylesheet: rj-index.css
 
 <main class="rejuvenation-wrapper">
   <section class="about-hero">
-    <span class="quickLabel">Work Log: 2023–2025</span>
+    <span class="quickLabel">An Expanded List</span>
     <h1 class="hero-statement">My Time At Rejuvenation</h1>
   </section>
 
@@ -40,10 +40,8 @@ stylesheet: rj-index.css
           {% for metric in project.metrics %}
           <div class="rj-metric-item">
             <span class="rj-metric-value">{{ metric.value }}</span>
-            <span class="rj-metric-label">{{ metric.label }}</span>
+            {% if metric.label != "Outcome" %}<span class="rj-metric-label">{{ metric.label }}</span>{% endif %}
           </div>
-          {% else %}
-          <span class="rj-internal-tool">Internal Tool</span>
           {% endfor %}
         </div>
 

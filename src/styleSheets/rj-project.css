@@ -8,7 +8,7 @@
   width: 100%;
   max-width: var(--content-max-width);
   margin-inline: auto;
-  padding-inline: 0;
+  padding-inline: var(--mobile-gutter);
   padding-top: var(--space-xl);
   padding-bottom: var(--space-2xl);
 }
@@ -37,7 +37,7 @@
   width: 100%;
   max-width: var(--content-max-width);
   margin-inline: auto;
-  padding-inline: 0;
+  padding-inline: var(--mobile-gutter);
   display: grid;
   grid-template-columns: 5fr 7fr;
   gap: var(--component-gap);
@@ -141,10 +141,6 @@
 
 /* === 1264px: Add padding for medium screens === */
 @media (max-width: 1264px) {
-  .rj-project-hero,
-  .rj-project-wrapper {
-    padding-inline: var(--mobile-gutter);
-  }
 }
 
 /* === 900px: Collapse to mobile layout === */

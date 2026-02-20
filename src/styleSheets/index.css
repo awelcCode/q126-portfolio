@@ -1,6 +1,8 @@
 /* ===== 1. VARIABLES & RESET ===== */
 .resume,
-.featured-wrapper .pageSectionMargin {
+.featured-wrapper .pageSectionMargin,
+.hero,
+.homepage-nav {
   max-width: var(--content-max-width);
   margin-inline: auto;
   padding-inline: var(--mobile-gutter);
@@ -41,7 +43,6 @@ body {
 }
 
 /* Index-specific centering for main sections */
-.hero,
 .featured-wrapper .pageSectionMargin,
 .resume,
 .fun-archive {
@@ -57,6 +58,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   padding: 0;
+  background: var(--color-lightestGrey);
 }
 
 /* Nav inside heroWrapper - let it handle its own padding from base.css */
@@ -72,9 +74,14 @@ body {
   align-content: end;
   flex-grow: 1;
   width: 100%;
-  max-width: var(--content-max-width);
-  margin-inline: auto;
+  margin-bottom: var(--space-md); /* Chrome: 2rem */
+  padding-bottom: var(--space-lg); /* Chrome: 4rem = 6rem total */
   align-items: start;
+}
+
+/* Safari needs more spacing */
+.is-safari .hero {
+  margin-bottom: var(--space-xl);
   padding-bottom: var(--space-xl);
 }
 
@@ -110,13 +117,13 @@ h1 {
 }
 
 .heroRight {
-  grid-column: 10 / 13; /* Same as .project-nav-rail */
+  grid-column: 10 / 13;
   position: sticky;
   top: 160px;
   height: fit-content;
   border-left: 1.5px solid var(--color-dark);
   padding-left: 1.5rem;
-  align-self: end; /* Don't push to bottom */
+  align-self: end;
 }
 
 .heroRight,
@@ -496,13 +503,6 @@ section.allWork {
   }
 }
 
-/* === 601-1264px: Match hero padding with homepage nav === */
-@media (min-width: 601px) and (max-width: 1264px) {
-  .hero {
-    padding-inline: var(--mobile-gutter);
-  }
-}
-
 @media (max-width: 900px) {
   .hero,
   .resumeBlock {
@@ -531,7 +531,6 @@ section.allWork {
   .hero {
     grid-template-columns: 1fr;
     gap: var(--component-gap);
-    padding-bottom: var(--space-xl);
   }
 
   .heroLeft {
@@ -682,8 +681,14 @@ section.allWork {
     padding-inline: var(--mobile-gutter);
   }
 
-  .hero {
+  .hero,
+  .homepage-nav {
     padding-inline: 0; /* Remove padding since heroWrapper has it */
+  }
+
+  .homepage-nav .nav-dropdown {
+    left: 0; /* Full width on mobile homepage since nav is already inset */
+    right: 0;
   }
 
   .heroLeft h1 {

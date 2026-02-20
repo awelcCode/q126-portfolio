@@ -103,7 +103,7 @@ nav {
   width: 100%;
   max-width: var(--content-max-width);
   margin-inline: auto;
-  padding-inline: 0;
+  padding-inline: var(--mobile-gutter); /* Match other content */
   padding-top: var(--nav-padding-top);
   position: sticky;
   top: 0;
@@ -118,7 +118,7 @@ nav.nav-hidden {
 
 /* Homepage nav is NOT sticky - it's inside the 100vh heroWrapper */
 .homepage-nav {
-  position: static;
+  position: relative; /* Changed from static for dropdown positioning */
 }
 
 /* Homepage nav doesn't auto-hide since it's not sticky */
@@ -233,6 +233,10 @@ nav div.navColor {
 
 /* Dropdown Panel */
 .nav-dropdown {
+  position: absolute; /* Overlay instead of push */
+  top: 100%; /* Position below nav */
+  left: var(--mobile-gutter); /* Inset to match nav padding */
+  right: var(--mobile-gutter); /* Inset to match nav padding */
   background-color: var(--color-dark);
   border-radius: 10px;
   margin-top: 8px;
@@ -242,6 +246,7 @@ nav div.navColor {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 50; /* Above content */
 }
 
 .nav-dropdown.active {
@@ -411,19 +416,7 @@ nav div.navColor {
   width: 100%;
   max-width: var(--content-max-width);
   margin-inline: auto;
-  padding-inline: 0;
-}
-
-/* Add gutters only when viewport is smaller than max-width + padding */
-@media (max-width: 1264px) {
-  nav:not(.homepage-nav),
-  .page-content,
-  .about-wrapper,
-  .project-body-wrapper,
-  .project-hero,
-  .rejuvenation-wrapper {
-    padding-inline: var(--mobile-gutter);
-  }
+  padding-inline: var(--mobile-gutter); /* Match nav padding */
 }
 
 /* --- STATIC SITE FOOTER --- */
@@ -500,7 +493,7 @@ nav div.navColor {
   }
 
   .nav-dropdown {
-    padding: var(--space-sm) 0; /* Vertical padding only */
+    padding-block: var(--space-sm); /* Reduce vertical padding on mobile */
   }
 
   .nav-dropdown.active {

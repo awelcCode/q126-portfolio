@@ -91,11 +91,6 @@
 .rj-project-link:hover {
   color: var(--color-accent);
 }
-  font-size: 14px;
-  color: var(--color-dark);
-  display: block;
-  line-height: 1.3;
-}
 
 .rj-category {
   font-size: 10px;
@@ -119,8 +114,8 @@
 
 .rj-metric-item {
   display: flex;
-  gap: 6px;
-  align-items: baseline;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .rj-metric-value {

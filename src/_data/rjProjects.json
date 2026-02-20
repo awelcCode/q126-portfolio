@@ -3,450 +3,908 @@
     {
       "id": "01",
       "slug": "buy-box-2-configured-lighting",
-      "category": "Ecommerce",
-      "name": "Buy Box 2.0 — Configured Lighting",
-      "oneLine": "Redesigned complex lighting configuration to improve hierarchy, pricing clarity, and decision confidence.",
-      "summary": "A focused redesign of the configured lighting Buy Box to reduce cognitive load and help customers choose confidently.",
+      "category": "Ecommerce / UX",
+      "name": "Buy Box 2.0 \u2014 Configured Lighting",
+      "oneLine": "Redesigned the configured lighting Buy Box in 10 days to improve hierarchy, pricing clarity, and decision confidence.",
+      "summary": "A focused redesign of the configured lighting Buy Box to reduce cognitive load and help customers choose confidently across finish, length, ceiling type, and shade selection.",
       "page": true,
       "group": "PIP / Buy Box",
-      "timeframe": { "start": null, "end": null },
-      "role": ["Product Designer", "UX Designer"],
+      "timeframe": {
+        "start": null,
+        "end": null
+      },
+      "role": [
+        "Product Designer",
+        "UX Designer"
+      ],
       "responsibilities": [
-        "Information hierarchy + layout",
+        "Information hierarchy + layout redesign",
         "Interaction design for configuration trays",
         "Pricing clarity + decision support",
-        "Design handoff + iteration with dev"
+        "Component-driven iteration at scale",
+        "Shade table visual refinement",
+        "Design handoff + dev collaboration"
       ],
-      "platforms": ["Web"],
-      "tools": ["Figma"],
-      "deliverables": ["Design comps", "Interaction specs"],
+      "platforms": [
+        "Web"
+      ],
+      "tools": [
+        "Figma"
+      ],
+      "deliverables": [
+        "Design comps (desktop + mobile)",
+        "Component-managed specs",
+        "Interaction documentation"
+      ],
       "metrics": [
-        { "label": "Conversion", "value": "+13%" },
-        { "label": "Revenue per visit", "value": "+17%" }
+        {
+          "label": "Conversion rate",
+          "value": "+13%"
+        },
+        {
+          "label": "Revenue per visit",
+          "value": "+17%"
+        },
+        {
+          "label": "Orders",
+          "value": "+11%"
+        },
+        {
+          "label": "Revenue",
+          "value": "+8%"
+        }
       ],
-      "links": { "caseStudy": null, "figma": null },
+      "links": {
+        "caseStudy": null,
+        "figma": null
+      },
       "images": {
         "thumb": "/img/projects/buy-box-2/thumb.jpg",
         "hero": "/img/projects/buy-box-2/hero.jpg",
         "gallery": []
       },
-      "tags": ["Configured products", "PDP", "Conversion", "Hierarchy"]
+      "tags": [
+        "Configured products",
+        "PIP",
+        "Conversion",
+        "Hierarchy",
+        "Components"
+      ]
     },
     {
       "id": "02",
       "slug": "buy-box-usability-testing",
-      "category": "Research / UX",
+      "category": "UX Research",
       "name": "Buy Box Usability Testing",
-      "oneLine": "Conducted 1:1 remote usability testing to identify friction points in the custom lighting journey.",
-      "summary": "Gathering qualitative insights on the custom lighting journey to identify friction points and opportunities.",
+      "oneLine": "Introduced moderated usability testing to Rejuvenation \u2014 the first of its kind for a change of this type.",
+      "summary": "Planned and ran independent usability testing sessions to evaluate the redesigned Buy Box configuration experience, surfacing friction points and aligning stakeholders around user-centered decisions.",
       "page": false,
       "group": "PIP / Buy Box",
-      "timeframe": { "start": null, "end": null },
-      "role": ["UX Researcher"],
+      "timeframe": {
+        "start": null,
+        "end": null
+      },
+      "role": [
+        "UX Researcher"
+      ],
       "responsibilities": [
         "Test script writing",
-        "Participant moderation",
-        "Insight synthesis",
-        "Roadmap recommendations"
+        "Leadership feedback integration",
+        "Independent session scheduling + moderation",
+        "Findings synthesis + design recommendations"
       ],
-      "platforms": ["Web"],
-      "tools": ["UserTesting", "Figma"],
-      "deliverables": ["Usability report", "Actionable UX roadmap"],
+      "platforms": [
+        "Web"
+      ],
+      "tools": [
+        "Figma"
+      ],
+      "deliverables": [
+        "Usability test script",
+        "Session findings",
+        "Design recommendations"
+      ],
       "metrics": [
-        { "label": "Outcome", "value": "Defined 4 key Roadmap items" }
+        {
+          "label": "Moderated sessions",
+          "value": "7"
+        },
+        {
+          "label": "Outcome",
+          "value": "First usability testing effort of this type at Rejuvenation"
+        }
       ],
-      "links": { "caseStudy": null },
+      "links": {
+        "caseStudy": null
+      },
       "images": {
         "thumb": "/img/projects/buy-box-test/thumb.jpg",
         "hero": "/img/projects/buy-box-test/hero.jpg",
         "gallery": []
       },
-      "tags": ["User testing", "Qualitative research", "Insights"]
+      "tags": [
+        "Usability testing",
+        "Qualitative research",
+        "Moderated sessions",
+        "Insights"
+      ]
     },
     {
       "id": "03",
-      "slug": "cart-upsell-recs",
-      "category": "Ecommerce / Revenue",
-      "name": "Cart Upsell Recommendations",
-      "oneLine": "Implemented cross-sell logic within the cart to drive higher AOV through curated product pairings.",
-      "summary": "Driving higher AOV through a targeted cross-sell experience in the high-intent cart environment.",
-      "page": false,
-      "group": "Cart / Checkout",
-      "timeframe": { "start": null, "end": null },
-      "role": ["Designer"],
-      "responsibilities": [
-        "Recommendation module UI",
-        "A/B test iteration",
-        "Logic alignment with product"
+      "slug": "modular-shelving-visualizer",
+      "category": "Interactive / UX",
+      "name": "Modular Shelving Interactive Builder",
+      "oneLine": "Designed and prototyped an interactive shelving visualizer that proved out a new pattern for complex product exploration at Rejuvenation.",
+      "summary": "Designed the modular shelving visualization experience for the landing page and PIP modal, establishing foundational patterns and prototyping techniques that carried forward into higher-stakes visualizer work.",
+      "page": true,
+      "group": "Interactive / Visualizers",
+      "timeframe": {
+        "start": null,
+        "end": null
+      },
+      "role": [
+        "Product Designer",
+        "Prototyper"
       ],
-      "platforms": ["Web"],
-      "tools": ["Figma"],
-      "deliverables": ["Cart UI comps", "Recommendation logic mapping"],
-      "metrics": [{ "label": "AOV", "value": "+5% (targeted segments)" }],
-      "links": { "caseStudy": null },
+      "responsibilities": [
+        "Wireframes + high-fidelity design",
+        "Advanced Figma prototyping (variables + layered states)",
+        "Interaction model communication for exec review",
+        "Illustration coordination with DTC + web merchandising",
+        "Engineering QA for complex ECM build",
+        "PIP modal + Fairfield addition design"
+      ],
+      "platforms": [
+        "Web"
+      ],
+      "tools": [
+        "Figma"
+      ],
+      "deliverables": [
+        "Landing page design",
+        "PIP modal design",
+        "Interactive prototypes",
+        "Interaction specs"
+      ],
+      "metrics": [
+        {
+          "label": "Bounce rate",
+          "value": "24.04%"
+        },
+        {
+          "label": "Outcome",
+          "value": "Validated interactive visualization as a viable site pattern"
+        }
+      ],
+      "links": {
+        "caseStudy": null,
+        "figma": null
+      },
       "images": {
-        "thumb": "/img/projects/cart-upsell/thumb.jpg",
-        "hero": "/img/projects/cart-upsell/hero.jpg",
+        "thumb": "/img/projects/modular-shelving/thumb.jpg",
+        "hero": "/img/projects/modular-shelving/hero.jpg",
         "gallery": []
       },
-      "tags": ["Conversion", "AOV", "Ecommerce", "Cart"]
+      "tags": [
+        "Interactive",
+        "Prototyping",
+        "Visualization",
+        "ECM",
+        "Figma variables"
+      ]
     },
     {
       "id": "04",
-      "slug": "factory-tour-redesign",
-      "category": "Brand / Storytelling",
-      "name": "Factory Tour Redesign",
-      "oneLine": "Interactive brand story page showcasing craftsmanship through modular, shop-able content sections.",
-      "summary": "Bridging the gap between brand storytelling and commerce by making the craftsmanship narrative shop-able.",
+      "slug": "lighting-visualizer",
+      "category": "Interactive / Mobile UX",
+      "name": "Lighting Visualizer",
+      "oneLine": "Designed the mobile experience and contributed prototyping, modal design, and shop path integration for Rejuvenation's Lighting Visualizer.",
+      "summary": "Applied learnings from Modular Shelving to a significantly higher-stakes category. Designed a calm, clarity-first mobile experience and contributed interaction prototyping across 36+ variants to accelerate alignment without additional engineering cost.",
       "page": true,
-      "group": "Editorial",
-      "timeframe": { "start": null, "end": null },
-      "role": ["Visual Designer"],
+      "group": "Interactive / Visualizers",
+      "timeframe": {
+        "start": null,
+        "end": null
+      },
+      "role": [
+        "Product Designer",
+        "Prototyper"
+      ],
       "responsibilities": [
-        "Interactive story layout",
-        "Modular CMS component design",
-        "Interactive hotspots"
+        "Mobile visualizer UX + visual design",
+        "Desktop modal design",
+        "Rapid brute-force prototyping (36+ variants)",
+        "Shop path badge + icon design",
+        "CSS animation proof-of-concept",
+        "PIP button entry point design"
       ],
-      "platforms": ["Web"],
-      "tools": ["Figma", "CMS Layouts"],
-      "deliverables": ["Interactive story templates", "Shop-able components"],
+      "platforms": [
+        "Web",
+        "Mobile Web"
+      ],
+      "tools": [
+        "Figma"
+      ],
+      "deliverables": [
+        "Mobile visualizer screens",
+        "Desktop modal",
+        "Shop path assets",
+        "Interaction prototypes"
+      ],
       "metrics": [
-        { "label": "CTR to shop", "value": "+42%" },
-        { "label": "Time on page", "value": "2.4x" }
+        {
+          "label": "Variants prototyped",
+          "value": "36+"
+        },
+        {
+          "label": "Outcome",
+          "value": "Accelerated exec alignment without additional engineering cost"
+        }
       ],
-      "links": { "caseStudy": null },
+      "links": {
+        "caseStudy": null,
+        "figma": null
+      },
       "images": {
-        "thumb": "/img/projects/factory-tour/thumb.jpg",
-        "hero": "/img/projects/factory-tour/hero.jpg",
+        "thumb": "/img/projects/lighting-visualizer/thumb.jpg",
+        "hero": "/img/projects/lighting-visualizer/hero.jpg",
         "gallery": []
       },
-      "tags": ["Brand storytelling", "Editorial UX", "Interactive", "Video"]
+      "tags": [
+        "Mobile UX",
+        "Interactive",
+        "Prototyping",
+        "Visualization",
+        "Animation"
+      ]
     },
     {
       "id": "05",
-      "slug": "nav-utility-optimization",
-      "category": "Navigation / UX",
-      "name": "Global Nav Utility Optimization",
-      "oneLine": "Refined utility links and search bar visibility to improve cross-category discovery.",
-      "summary": "Improving the discoverability of high-utility functions in the global header.",
-      "page": false,
-      "group": "Global",
-      "timeframe": { "start": null, "end": null },
-      "role": ["Designer"],
-      "responsibilities": [
-        "Search UI refinement",
-        "Utility link hierarchy",
-        "Mobile nav audit"
+      "slug": "nicolai-factory-page",
+      "category": "Brand / Storytelling",
+      "name": "Nicolai Factory Page",
+      "oneLine": "Redesigned Rejuvenation's factory brand page to modernize craftsmanship storytelling and deepen customer connection.",
+      "summary": "Transitioned from the 2024 Our Factory page to a refined 2025 Nicolai experience rooted in brand authority \u2014 improving engagement quality and approaching prior year's full revenue in roughly half the time.",
+      "page": true,
+      "group": "Editorial / Brand",
+      "timeframe": {
+        "start": null,
+        "end": null
+      },
+      "role": [
+        "Visual Designer",
+        "Brand Designer"
       ],
-      "platforms": ["Web / Mobile"],
-      "tools": ["Figma"],
-      "deliverables": ["Nav spec updates", "Mobile nav prototypes"],
-      "metrics": [{ "label": "Exit rate (Nav)", "value": "-8%" }],
-      "links": { "caseStudy": null },
+      "responsibilities": [
+        "Multi-direction concept exploration",
+        "Layout + hierarchy refinement",
+        "Copywriter collaboration",
+        "Desktop + mobile delivery"
+      ],
+      "platforms": [
+        "Web"
+      ],
+      "tools": [
+        "Figma"
+      ],
+      "deliverables": [
+        "Desktop + mobile page designs",
+        "Final production-ready comps"
+      ],
+      "metrics": [
+        {
+          "label": "Bounce rate",
+          "value": "45.35% (\u2193 from 49.94%)"
+        },
+        {
+          "label": "Revenue (\u00bd year)",
+          "value": "$54.2K vs. $69K full prior year"
+        }
+      ],
+      "links": {
+        "caseStudy": null
+      },
       "images": {
-        "thumb": "/img/projects/nav-opt/thumb.jpg",
-        "hero": "/img/projects/nav-opt/hero.jpg",
+        "thumb": "/img/projects/nicolai/thumb.jpg",
+        "hero": "/img/projects/nicolai/hero.jpg",
         "gallery": []
       },
-      "tags": ["Navigation", "IA", "Utility", "Wayfinding"]
+      "tags": [
+        "Brand storytelling",
+        "Editorial",
+        "Craftsmanship",
+        "Visual design"
+      ]
     },
     {
       "id": "06",
-      "slug": "outdoor-lighting-configurator",
-      "category": "Ecommerce",
-      "name": "Outdoor Lighting Configurator",
-      "oneLine": "Adapted the configured lighting framework for outdoor durability and technical specs.",
-      "summary": "Leveraging existing lighting configuration patterns for the specialized needs of outdoor categories.",
-      "page": false,
-      "group": "PDP / Buy Box",
-      "timeframe": { "start": null, "end": null },
-      "role": ["Product Designer"],
-      "responsibilities": [
-        "Category-specific spec layout",
-        "Selection logic validation",
-        "Asset coordination"
+      "slug": "project-collective-redesign",
+      "category": "Brand / UX",
+      "name": "Project Collective Redesign",
+      "oneLine": "Rebranded Rejuvenation's influencer program with a refined editorial aesthetic and improved storytelling structure.",
+      "summary": "Designed the visual and experiential rebrand of Project Collective \u2014 introducing tabbed navigation, competitive analysis, moodboards, and a design-forward aesthetic that elevated partner visibility and brand alignment.",
+      "page": true,
+      "group": "Editorial / Brand",
+      "timeframe": {
+        "start": null,
+        "end": null
+      },
+      "role": [
+        "Visual Designer",
+        "UX Designer"
       ],
-      "platforms": ["Web"],
-      "tools": ["Figma"],
-      "deliverables": ["Configurator comps", "Logic documentation"],
-      "metrics": [{ "label": "Time to cart", "value": "-15 seconds" }],
-      "links": { "caseStudy": null },
+      "responsibilities": [
+        "Competitive analysis",
+        "Moodboarding + visual direction",
+        "Wireframes + high-fidelity design",
+        "Tabbed navigation pattern",
+        "Desktop + mobile delivery"
+      ],
+      "platforms": [
+        "Web"
+      ],
+      "tools": [
+        "Figma"
+      ],
+      "deliverables": [
+        "Desktop + mobile page designs",
+        "Navigation pattern",
+        "Visual direction exploration"
+      ],
+      "metrics": [],
+      "links": {
+        "caseStudy": null
+      },
       "images": {
-        "thumb": "/img/projects/outdoor-lighting/thumb.jpg",
-        "hero": "/img/projects/outdoor-lighting/hero.jpg",
+        "thumb": "/img/projects/project-collective/thumb.jpg",
+        "hero": "/img/projects/project-collective/hero.jpg",
         "gallery": []
       },
-      "tags": ["Product design", "Configuration", "Technical specs"]
+      "tags": [
+        "Brand",
+        "Editorial UX",
+        "Influencer program",
+        "Navigation",
+        "Visual direction"
+      ]
     },
     {
       "id": "07",
-      "slug": "custom-upholstery-swatches",
-      "category": "UX / Flow",
-      "name": "Upholstery Swatch Flow",
-      "oneLine": "Simplified the swatch ordering process to lower the barrier for high-consideration furniture sales.",
-      "summary": "Lowering friction for fabric sampling to build customer confidence in high-ticket furniture purchases.",
-      "page": false,
-      "group": "PDP",
-      "timeframe": { "start": null, "end": null },
-      "role": ["UX Designer"],
-      "responsibilities": [
-        "Swatch modal UI",
-        "Cart entry flow",
-        "Email follow-up design"
+      "slug": "q4-holiday-lookbook",
+      "category": "Brand / Campaign",
+      "name": "Q4 Holiday Lookbook",
+      "oneLine": "Designed the Holiday Lookbook end-to-end, contributing to a 73% revenue increase year over year.",
+      "summary": "Designed within the established lookbook template system \u2014 curating imagery, refining section pacing, and designing desktop and mobile hero videos \u2014 while delivering final assets on an accelerated timeline.",
+      "page": true,
+      "group": "Editorial / Brand",
+      "timeframe": {
+        "start": null,
+        "end": null
+      },
+      "role": [
+        "Visual Designer",
+        "Brand Designer"
       ],
-      "platforms": ["Web"],
-      "tools": ["Figma"],
-      "deliverables": ["Swatch UI spec", "Customer journey map"],
-      "metrics": [{ "label": "Swatch orders", "value": "+22%" }],
-      "links": { "caseStudy": null },
+      "responsibilities": [
+        "Imagery curation + pacing",
+        "Hero video design (desktop + mobile)",
+        "Section layout + copy integration",
+        "Late-stage image swaps",
+        "Final asset slicing + handoff"
+      ],
+      "platforms": [
+        "Web"
+      ],
+      "tools": [
+        "Figma"
+      ],
+      "deliverables": [
+        "Full lookbook design (desktop + mobile)",
+        "Hero video comps",
+        "Production-ready asset slices"
+      ],
+      "metrics": [
+        {
+          "label": "Bounce rate",
+          "value": "53.9% (\u2193 from 73.06%)"
+        }
+      ],
+      "links": {
+        "caseStudy": null
+      },
       "images": {
-        "thumb": "/img/projects/swatches/thumb.jpg",
-        "hero": "/img/projects/swatches/hero.jpg",
+        "thumb": "/img/projects/holiday-lookbook/thumb.jpg",
+        "hero": "/img/projects/holiday-lookbook/hero.jpg",
         "gallery": []
       },
-      "tags": ["Friction reduction", "Confidence building", "E-comm flow"]
+      "tags": [
+        "Campaign",
+        "Editorial",
+        "Lookbook",
+        "Visual design",
+        "Brand storytelling"
+      ]
     },
     {
       "id": "08",
-      "slug": "antiques-one-of-a-kind-ux",
-      "category": "Curation / UX",
-      "name": "Antiques & One-of-a-Kind UX",
-      "oneLine": "Specialized PDP layout for unique inventory, emphasizing condition reports and high-fidelity photography.",
-      "summary": "Designing a specialized PDP experience for products where every item is a unique SKU with specific history.",
-      "page": true,
-      "group": "PDP",
-      "timeframe": { "start": null, "end": null },
-      "role": ["Designer"],
-      "responsibilities": [
-        "Condition report UI",
-        "Antique-specific photography specs",
-        "Inventory tagging UX"
+      "slug": "finish-guide-updates",
+      "category": "UX / Content",
+      "name": "Finish Guide Updates",
+      "oneLine": "Improved finish education and discoverability on PIP by introducing mobile pagination and overhauling finish categories.",
+      "summary": "Updated the Finish Guide landing page and PIP embedded experience for 2025 finish launches \u2014 solving a key mobile usability issue where horizontally scrollable content appeared empty and was easy to miss.",
+      "page": false,
+      "group": "PIP / Content",
+      "timeframe": {
+        "start": null,
+        "end": null
+      },
+      "role": [
+        "UX Designer",
+        "Product Designer"
       ],
-      "platforms": ["Web"],
-      "tools": ["Figma"],
-      "deliverables": ["Unique SKU PDP template", "Asset requirements"],
+      "responsibilities": [
+        "Mobile pagination design + engineering partnership",
+        "Finish category overhaul (based on merchandising audit)",
+        "Finish Guide modal design",
+        "Desktop + mobile delivery"
+      ],
+      "platforms": [
+        "Web",
+        "Mobile Web"
+      ],
+      "tools": [
+        "Figma"
+      ],
+      "deliverables": [
+        "Updated Finish Guide (desktop + mobile)",
+        "Pagination pattern",
+        "Finish Guide modals"
+      ],
       "metrics": [
         {
           "label": "Outcome",
-          "value": "Launched unique-SKU engine for Antiques"
+          "value": "Resolved hidden content usability issue on mobile"
         }
       ],
-      "links": { "caseStudy": null },
+      "links": {
+        "caseStudy": null
+      },
       "images": {
-        "thumb": "/img/projects/antiques/thumb.jpg",
-        "hero": "/img/projects/antiques/hero.jpg",
+        "thumb": "/img/projects/finish-guide/thumb.jpg",
+        "hero": "/img/projects/finish-guide/hero.jpg",
         "gallery": []
       },
-      "tags": ["Unique inventory", "PDP", "Storytelling", "Metadata"]
+      "tags": [
+        "Mobile UX",
+        "PIP",
+        "Content discoverability",
+        "Education",
+        "Pagination"
+      ]
     },
     {
       "id": "09",
-      "slug": "holiday-gift-guide-system",
-      "category": "Editorial / CMS",
-      "name": "Holiday Gift Guide System",
-      "oneLine": "Modular CMS components for high-velocity seasonal campaigns.",
-      "summary": "Creating a flexible toolkit for editorial teams to build high-converting gift guides rapidly.",
+      "slug": "b2b-landing-page",
+      "category": "Brand / UX",
+      "name": "B2B Landing Page",
+      "oneLine": "Designed Rejuvenation's trade program landing page, building a full shared section library from the ground up.",
+      "summary": "Designed a clear, modern B2B program page that communicates membership perks, offerings, and support \u2014 contributing all library sections used on the page and incorporating feedback across merchandising, marketing, and design leadership.",
       "page": false,
-      "group": "Editorial",
-      "timeframe": { "start": null, "end": null },
-      "role": ["Designer"],
-      "responsibilities": [
-        "Component-based grid design",
-        "Mobile-first editorial patterns",
-        "Asset guide for content team"
+      "group": "Editorial / Brand",
+      "timeframe": {
+        "start": null,
+        "end": null
+      },
+      "role": [
+        "Visual Designer",
+        "UX Designer"
       ],
-      "platforms": ["Web"],
-      "tools": ["Figma", "CMS"],
-      "deliverables": ["Component library", "Seasonal guide template"],
-      "metrics": [{ "label": "Dev time", "value": "-30% (vs previous year)" }],
-      "links": { "caseStudy": null },
+      "responsibilities": [
+        "Section library design (all sections)",
+        "Layout + hierarchy refinement",
+        "Multi-stakeholder feedback integration",
+        "Desktop + mobile delivery"
+      ],
+      "platforms": [
+        "Web"
+      ],
+      "tools": [
+        "Figma"
+      ],
+      "deliverables": [
+        "Full page design (desktop + mobile)",
+        "Shared section library"
+      ],
+      "metrics": [],
+      "links": {
+        "caseStudy": null
+      },
       "images": {
-        "thumb": "/img/projects/gift-guide/thumb.jpg",
-        "hero": "/img/projects/gift-guide/hero.jpg",
+        "thumb": "/img/projects/b2b/thumb.jpg",
+        "hero": "/img/projects/b2b/hero.jpg",
         "gallery": []
       },
-      "tags": ["Modular design", "CMS", "Seasonal", "Editorial"]
+      "tags": [
+        "B2B",
+        "Trade program",
+        "Brand",
+        "Section library",
+        "Visual design"
+      ]
     },
     {
       "id": "10",
-      "slug": "accessibility-audit-remediation",
-      "category": "Accessibility / UI",
-      "name": "Accessibility Remediation",
-      "oneLine": "Site-wide audit and fix for color contrast, screen reader labeling, and keyboard navigation.",
-      "summary": "Aligning the site UI with WCAG 2.1 standards to ensure inclusivity and compliance.",
+      "slug": "nye-winter-lookbook",
+      "category": "Brand / Campaign",
+      "name": "NYE / Winter Lookbook",
+      "oneLine": "Designed the New Year's lookbook, contributing to a 79% revenue increase year over year with flat traffic.",
+      "summary": "Designed the NYE/Winter Lookbook within the established template system \u2014 curating imagery, integrating seasonal copy, and refining pacing and visual narrative across sections for desktop and mobile.",
       "page": false,
-      "group": "Global",
-      "timeframe": { "start": null, "end": null },
-      "role": ["Designer / UI Specialist"],
-      "responsibilities": [
-        "Contrast audit",
-        "Screen-reader labels (ARIA)",
-        "Focus state redesign"
+      "group": "Editorial / Brand",
+      "timeframe": {
+        "start": null,
+        "end": null
+      },
+      "role": [
+        "Visual Designer",
+        "Brand Designer"
       ],
-      "platforms": ["Web"],
-      "tools": ["Lighthouse", "Siteimprove", "Figma"],
-      "deliverables": ["Accessibility audit log", "UI remediation spec"],
-      "metrics": [{ "label": "Lighthouse Score", "value": "98/100" }],
-      "links": { "caseStudy": null },
+      "responsibilities": [
+        "Imagery curation + section pacing",
+        "Hero video design (desktop + mobile)",
+        "Copy integration + layout refinement",
+        "Asset slicing + handoff"
+      ],
+      "platforms": [
+        "Web"
+      ],
+      "tools": [
+        "Figma"
+      ],
+      "deliverables": [
+        "Full lookbook design (desktop + mobile)",
+        "Hero video comps",
+        "Production-ready asset slices"
+      ],
+      "metrics": [
+        {
+          "label": "Bounce rate",
+          "value": "63.27% (\u2193 from 79.85%)"
+        }
+      ],
+      "links": {
+        "caseStudy": null
+      },
       "images": {
-        "thumb": "/img/projects/accessibility/thumb.jpg",
-        "hero": "/img/projects/accessibility/hero.jpg",
+        "thumb": "/img/projects/nye-lookbook/thumb.jpg",
+        "hero": "/img/projects/nye-lookbook/hero.jpg",
         "gallery": []
       },
-      "tags": ["Accessibility", "WCAG", "Compliance", "UI"]
+      "tags": [
+        "Campaign",
+        "Editorial",
+        "Lookbook",
+        "Visual design",
+        "Brand storytelling"
+      ]
     },
     {
       "id": "11",
-      "slug": "cabinet-hardware-filter-logic",
-      "category": "Search / Filter",
-      "name": "Cabinet Hardware Filters",
-      "oneLine": "Added center-to-center and finish-specific filtering to complex hardware categories.",
-      "summary": "Helping customers navigate thousands of technical SKUs through precise filtering logic.",
+      "slug": "spring-lookbook",
+      "category": "Brand / Campaign",
+      "name": "Spring Lookbook",
+      "oneLine": "Designed the Spring Lookbook, curating seasonal imagery and refining visual narrative across desktop and mobile.",
+      "summary": "Designed the Spring Lookbook within the established template system \u2014 curating imagery, integrating seasonal copy, and refining section pacing and visual flow for desktop and mobile.",
       "page": false,
-      "group": "PLP / Search",
-      "timeframe": { "start": null, "end": null },
-      "role": ["UX Designer"],
-      "responsibilities": [
-        "Technical attribute mapping",
-        "Filter UI refinement",
-        "Zero-result logic"
+      "group": "Editorial / Brand",
+      "timeframe": {
+        "start": null,
+        "end": null
+      },
+      "role": [
+        "Visual Designer",
+        "Brand Designer"
       ],
-      "platforms": ["Web"],
-      "tools": ["Figma"],
-      "deliverables": ["Search/Filter spec", "Attribute map"],
-      "metrics": [{ "label": "Filter use rate", "value": "+60%" }],
-      "links": { "caseStudy": null },
+      "responsibilities": [
+        "Imagery curation + section pacing",
+        "Hero video design (desktop + mobile)",
+        "Copy integration + layout refinement",
+        "Asset slicing + handoff"
+      ],
+      "platforms": [
+        "Web"
+      ],
+      "tools": [
+        "Figma"
+      ],
+      "deliverables": [
+        "Full lookbook design (desktop + mobile)",
+        "Hero video comps",
+        "Production-ready asset slices"
+      ],
+      "metrics": [],
+      "links": {
+        "caseStudy": null
+      },
       "images": {
-        "thumb": "/img/projects/hardware-filters/thumb.jpg",
-        "hero": "/img/projects/hardware-filters/hero.jpg",
+        "thumb": "/img/projects/spring-lookbook/thumb.jpg",
+        "hero": "/img/projects/spring-lookbook/hero.jpg",
         "gallery": []
       },
-      "tags": ["Filtering", "Search", "IA", "Technical SKU"]
+      "tags": [
+        "Campaign",
+        "Editorial",
+        "Lookbook",
+        "Visual design",
+        "Brand storytelling"
+      ]
     },
     {
       "id": "12",
-      "slug": "design-services-booking",
-      "category": "Service / UX",
-      "name": "Design Services Booking",
-      "oneLine": "Redesigned the intake form for free design consultations to increase lead quality.",
-      "summary": "Turning the design services intake into a high-value entry point for customer loyalty.",
+      "slug": "outdoor-lookbook",
+      "category": "Brand / Campaign",
+      "name": "Outdoor Lookbook",
+      "oneLine": "Designed the Outdoor Lookbook, translating Rejuvenation's brand aesthetic into a seasonal outdoor narrative.",
+      "summary": "Designed the Outdoor Lookbook within the established template system \u2014 curating imagery around the outdoor category, integrating seasonal copy, and refining section pacing and visual flow for desktop and mobile.",
       "page": false,
-      "group": "Service",
-      "timeframe": { "start": null, "end": null },
-      "role": ["UX Designer"],
-      "responsibilities": [
-        "Intake form optimization",
-        "Lead capture flow",
-        "Post-booking confirmation"
+      "group": "Editorial / Brand",
+      "timeframe": {
+        "start": null,
+        "end": null
+      },
+      "role": [
+        "Visual Designer",
+        "Brand Designer"
       ],
-      "platforms": ["Web"],
-      "tools": ["Figma"],
-      "deliverables": ["Form prototypes", "Service journey map"],
-      "metrics": [{ "label": "Consultation leads", "value": "+11%" }],
-      "links": { "caseStudy": null },
+      "responsibilities": [
+        "Imagery curation + section pacing",
+        "Hero video design (desktop + mobile)",
+        "Copy integration + layout refinement",
+        "Asset slicing + handoff"
+      ],
+      "platforms": [
+        "Web"
+      ],
+      "tools": [
+        "Figma"
+      ],
+      "deliverables": [
+        "Full lookbook design (desktop + mobile)",
+        "Hero video comps",
+        "Production-ready asset slices"
+      ],
+      "metrics": [],
+      "links": {
+        "caseStudy": null
+      },
       "images": {
-        "thumb": "/img/projects/design-services/thumb.jpg",
-        "hero": "/img/projects/design-services/hero.jpg",
+        "thumb": "/img/projects/outdoor-lookbook/thumb.jpg",
+        "hero": "/img/projects/outdoor-lookbook/hero.jpg",
         "gallery": []
       },
-      "tags": ["Lead gen", "Service design", "Forms"]
+      "tags": [
+        "Campaign",
+        "Editorial",
+        "Lookbook",
+        "Outdoor",
+        "Visual design"
+      ]
     },
     {
       "id": "13",
-      "slug": "mobile-cart-ux-refinement",
-      "category": "Mobile / UX",
-      "name": "Mobile Cart UX Refinement",
-      "oneLine": "Streamlined the sticky 'Add to Cart' and mobile mini-cart summary for easier checkout entry.",
-      "summary": "Optimizing the high-value mobile cart real estate for quick conversion and item management.",
+      "slug": "pip-content-blocks",
+      "category": "UX / Content",
+      "name": "PIP Content Blocks",
+      "oneLine": "Designed and delivered new and updated PIP content blocks for Stools, Rug Guide, and Tempaper.",
+      "summary": "Expanded PIP educational content across three product categories \u2014 adapting existing content, rebuilding components in Figma, and managing copy and implementation from design through QA.",
       "page": false,
-      "group": "Mobile / Cart",
-      "timeframe": { "start": null, "end": null },
-      "role": ["Designer"],
-      "responsibilities": [
-        "Sticky CTA refinement",
-        "Mini-cart summary layout",
-        "Touch target audit"
+      "group": "PIP / Content",
+      "timeframe": {
+        "start": null,
+        "end": null
+      },
+      "role": [
+        "UX Designer",
+        "Product Designer"
       ],
-      "platforms": ["Mobile Web"],
-      "tools": ["Figma"],
-      "deliverables": ["Mobile cart spec", "Interaction prototypes"],
-      "metrics": [{ "label": "Mobile Conversion", "value": "+4%" }],
-      "links": { "caseStudy": null },
+      "responsibilities": [
+        "Stools: adapted Kitchen Project Guide copy + illustrations into Stools PIP (desktop + mobile)",
+        "Rug Guide: rebuilt component in Figma + applied content updates",
+        "Tempaper: adapted PB reference into a 3\u00d71 step-by-step installation layout with custom removability callout",
+        "Copy coordination + site ops QA across all three"
+      ],
+      "platforms": [
+        "Web"
+      ],
+      "tools": [
+        "Figma"
+      ],
+      "deliverables": [
+        "Stools PIP content (desktop + mobile)",
+        "Rug Guide component",
+        "Tempaper step-by-step block (desktop + mobile)"
+      ],
+      "metrics": [],
+      "links": {
+        "caseStudy": null
+      },
       "images": {
-        "thumb": "/img/projects/mobile-cart/thumb.jpg",
-        "hero": "/img/projects/mobile-cart/hero.jpg",
+        "thumb": "/img/projects/pip-content/thumb.jpg",
+        "hero": "/img/projects/pip-content/hero.jpg",
         "gallery": []
       },
-      "tags": ["Mobile", "Cart", "Conversion", "UI"]
+      "tags": [
+        "PIP",
+        "Educational content",
+        "Content design",
+        "Multi-category"
+      ]
     },
     {
       "id": "14",
-      "slug": "lighting-collections-curation",
-      "category": "Curation / Visuals",
-      "name": "Lighting Collections Curation",
-      "oneLine": "Updated collection hierarchy to group by aesthetic family rather than just light type.",
-      "summary": "Re-architecting the category entry pages to align with how customers shop by aesthetic family.",
+      "slug": "benjamin-moore-campaign",
+      "category": "Brand / Campaign",
+      "name": "Benjamin Moore Campaign",
+      "oneLine": "Designed site, social, email, and print assets for Rejuvenation's Benjamin Moore partnership campaign.",
+      "summary": "A cross-brand campaign requiring design across multiple surfaces \u2014 site, social, email, and print. Designed the full asset suite for the Rejuvenation side of the collaboration, with potential to expand further.",
       "page": false,
-      "group": "PLP",
-      "timeframe": { "start": null, "end": null },
-      "role": ["Visual Designer"],
-      "responsibilities": [
-        "Collection image selection",
-        "Grid layout exploration",
-        "CMS content mapping"
+      "group": "Editorial / Brand",
+      "timeframe": {
+        "start": null,
+        "end": null
+      },
+      "role": [
+        "Visual Designer",
+        "Brand Designer"
       ],
-      "platforms": ["Web"],
-      "tools": ["Figma", "CMS"],
+      "responsibilities": [
+        "Site asset design",
+        "Social asset design",
+        "Email asset design",
+        "Print asset design"
+      ],
+      "platforms": [
+        "Web",
+        "Email",
+        "Print",
+        "Social"
+      ],
+      "tools": [
+        "Figma"
+      ],
       "deliverables": [
-        "24 updated collection images",
-        "Layout exploration comps"
+        "Site assets",
+        "Social assets",
+        "Email assets",
+        "Print assets"
       ],
       "metrics": [
         {
           "label": "Outcome",
-          "value": "Improved visual flow and category clarity"
+          "value": "Email drove highest site traffic of the year"
         }
       ],
-      "links": { "caseStudy": null },
+      "links": {
+        "caseStudy": null
+      },
       "images": {
-        "thumb": "/img/projects/lighting-collections/thumb.jpg",
-        "hero": "/img/projects/lighting-collections/hero.jpg",
+        "thumb": "/img/projects/benjamin-moore/thumb.jpg",
+        "hero": "/img/projects/benjamin-moore/hero.jpg",
         "gallery": []
       },
-      "tags": ["Category UX", "Curation", "CMS constraints"]
+      "tags": [
+        "Cross-brand",
+        "Campaign",
+        "Multi-surface",
+        "Brand design"
+      ]
     },
     {
       "id": "15",
-      "slug": "allstate-landing-and-pip-integration",
-      "category": "Cross-Brand / Ecommerce",
-      "name": "Allstate Landing + PIP Integration",
-      "oneLine": "Restyled cross-brand offering and adapted existing documentation patterns to streamline implementation.",
-      "summary": "A cross-brand integration effort that leaned on existing system patterns to move faster with less ambiguity.",
-      "page": true,
-      "group": "Cross-brand",
-      "timeframe": { "start": null, "end": null },
-      "role": ["Designer"],
-      "responsibilities": [
-        "Landing + PIP pattern adaptation",
-        "System-consistent restyling",
-        "Documentation-informed design"
+      "slug": "project-boards",
+      "category": "Content / Systems",
+      "name": "Project Boards",
+      "oneLine": "Tripled Rejuvenation's Project Boards library through large-scale content curation and established the team's asset standards.",
+      "summary": "Supported Rejuvenation's adoption of WSI's Pinterest-like Project Boards tool by establishing naming conventions, asset handoff standards, and contributing hundreds of curated assets across multiple programs \u2014 more than tripling the library size.",
+      "page": false,
+      "group": "Content / Operations",
+      "timeframe": {
+        "start": null,
+        "end": null
+      },
+      "role": [
+        "Designer",
+        "Content Strategist"
       ],
-      "platforms": ["Web"],
-      "tools": ["Figma"],
-      "deliverables": ["Landing page restyle", "PIP integration patterns"],
+      "responsibilities": [
+        "Naming conventions + asset handoff standards",
+        "UI QA",
+        "Large-scale content curation across multiple programs",
+        "Evergreen, seasonal, and program-specific selections"
+      ],
+      "platforms": [
+        "Web"
+      ],
+      "tools": [
+        "Figma"
+      ],
+      "deliverables": [
+        "Asset naming + handoff standards",
+        "200+ evergreen assets",
+        "Q3 + Q4 selections",
+        "Entryway + Project Collective selections"
+      ],
       "metrics": [
         {
-          "label": "Outcome",
-          "value": "Accelerated deployment using established system patterns"
+          "label": "Library size",
+          "value": "3x growth"
         }
       ],
-      "links": { "caseStudy": null },
+      "links": {
+        "caseStudy": null
+      },
       "images": {
-        "thumb": "/img/projects/allstate/thumb.jpg",
-        "hero": "/img/projects/allstate/hero.jpg",
+        "thumb": "/img/projects/project-boards/thumb.jpg",
+        "hero": "/img/projects/project-boards/hero.jpg",
         "gallery": []
       },
-      "tags": ["Cross-brand", "Ecommerce", "Integration", "Systems"]
+      "tags": [
+        "Content curation",
+        "Systems",
+        "Asset management",
+        "Scale"
+      ]
+    },
+    {
+      "id": "16",
+      "slug": "blog-redesign",
+      "category": "UX / Content",
+      "name": "Blog Redesign",
+      "oneLine": "Refactored the blog layout to improve hierarchy and deliver a right rail that had been planned but never successfully executed.",
+      "summary": "Redesigned the blog template to improve content hierarchy and integrate a conversion-focused right rail with contextual links \u2014 an addition that was on the roadmap but hadn't been made to work previously. Delivered multiple rounds of blog content within the new system.",
+      "page": false,
+      "group": "Editorial / Brand",
+      "timeframe": {
+        "start": null,
+        "end": null
+      },
+      "role": [
+        "UX Designer",
+        "Visual Designer"
+      ],
+      "responsibilities": [
+        "Layout + hierarchy improvements",
+        "Right rail design + contextual link integration",
+        "Desktop + mobile delivery",
+        "Multiple rounds of blog content production"
+      ],
+      "platforms": [
+        "Web"
+      ],
+      "tools": [
+        "Figma"
+      ],
+      "deliverables": [
+        "Redesigned blog template (desktop + mobile)",
+        "Right rail component",
+        "Multiple published blog rounds"
+      ],
+      "metrics": [],
+      "links": {
+        "caseStudy": null
+      },
+      "images": {
+        "thumb": "/img/projects/blog-redesign/thumb.jpg",
+        "hero": "/img/projects/blog-redesign/hero.jpg",
+        "gallery": []
+      },
+      "tags": [
+        "Editorial",
+        "Content design",
+        "Hierarchy",
+        "Conversion",
+        "Right rail"
+      ]
     }
   ]
 }
