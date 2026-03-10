@@ -13,10 +13,7 @@
         "start": null,
         "end": null
       },
-      "role": [
-        "Product Designer",
-        "UX Designer"
-      ],
+      "role": ["Product Designer", "UX Designer"],
       "responsibilities": [
         "Information hierarchy + layout redesign",
         "Interaction design for configuration trays",
@@ -25,12 +22,8 @@
         "Shade table visual refinement",
         "Design handoff + dev collaboration"
       ],
-      "platforms": [
-        "Web"
-      ],
-      "tools": [
-        "Figma"
-      ],
+      "platforms": ["Web"],
+      "tools": ["Figma"],
       "deliverables": [
         "Design comps (desktop + mobile)",
         "Component-managed specs",
@@ -59,8 +52,8 @@
         "figma": null
       },
       "images": {
-        "thumb": "/img/projects/buy-box-2/thumb.jpg",
-        "hero": "/img/projects/buy-box-2/hero.jpg",
+        "thumb": "/images/projects/buy-box-2/thumb.jpg",
+        "hero": "/images/projects/buy-box-2/hero.jpg",
         "gallery": []
       },
       "tags": [
@@ -84,21 +77,15 @@
         "start": null,
         "end": null
       },
-      "role": [
-        "UX Researcher"
-      ],
+      "role": ["UX Researcher"],
       "responsibilities": [
         "Test script writing",
         "Leadership feedback integration",
         "Independent session scheduling + moderation",
         "Findings synthesis + design recommendations"
       ],
-      "platforms": [
-        "Web"
-      ],
-      "tools": [
-        "Figma"
-      ],
+      "platforms": ["Web"],
+      "tools": ["Figma"],
       "deliverables": [
         "Usability test script",
         "Session findings",
@@ -118,8 +105,8 @@
         "caseStudy": null
       },
       "images": {
-        "thumb": "/img/projects/buy-box-test/thumb.jpg",
-        "hero": "/img/projects/buy-box-test/hero.jpg",
+        "thumb": "/images/projects/buy-box-test/thumb.jpg",
+        "hero": "/images/projects/buy-box-test/hero.jpg",
         "gallery": []
       },
       "tags": [
@@ -142,10 +129,7 @@
         "start": null,
         "end": null
       },
-      "role": [
-        "Product Designer",
-        "Prototyper"
-      ],
+      "role": ["Product Designer", "Prototyper"],
       "responsibilities": [
         "Wireframes + high-fidelity design",
         "Advanced Figma prototyping (variables + layered states)",
@@ -154,12 +138,8 @@
         "Engineering QA for complex ECM build",
         "PIP modal + Fairfield addition design"
       ],
-      "platforms": [
-        "Web"
-      ],
-      "tools": [
-        "Figma"
-      ],
+      "platforms": ["Web"],
+      "tools": ["Figma"],
       "deliverables": [
         "Landing page design",
         "PIP modal design",
@@ -181,8 +161,8 @@
         "figma": null
       },
       "images": {
-        "thumb": "/img/projects/modular-shelving/thumb.jpg",
-        "hero": "/img/projects/modular-shelving/hero.jpg",
+        "thumb": "/images/projects/modular-shelving/thumb.jpg",
+        "hero": "/images/projects/modular-shelving/hero.gif",
         "gallery": []
       },
       "tags": [
@@ -206,10 +186,7 @@
         "start": null,
         "end": null
       },
-      "role": [
-        "Product Designer",
-        "Prototyper"
-      ],
+      "role": ["Product Designer", "Prototyper"],
       "responsibilities": [
         "Mobile visualizer UX + visual design",
         "Desktop modal design",
@@ -218,13 +195,8 @@
         "CSS animation proof-of-concept",
         "PIP button entry point design"
       ],
-      "platforms": [
-        "Web",
-        "Mobile Web"
-      ],
-      "tools": [
-        "Figma"
-      ],
+      "platforms": ["Web", "Mobile Web"],
+      "tools": ["Figma"],
       "deliverables": [
         "Mobile visualizer screens",
         "Desktop modal",
@@ -246,8 +218,8 @@
         "figma": null
       },
       "images": {
-        "thumb": "/img/projects/lighting-visualizer/thumb.jpg",
-        "hero": "/img/projects/lighting-visualizer/hero.jpg",
+        "thumb": "/images/projects/lighting-visualizer/thumb.jpg",
+        "hero": "/images/projects/lighting-visualizer/hero.gif",
         "gallery": []
       },
       "tags": [
@@ -271,22 +243,15 @@
         "start": null,
         "end": null
       },
-      "role": [
-        "Visual Designer",
-        "Brand Designer"
-      ],
+      "role": ["Visual Designer", "Brand Designer"],
       "responsibilities": [
         "Multi-direction concept exploration",
         "Layout + hierarchy refinement",
         "Copywriter collaboration",
         "Desktop + mobile delivery"
       ],
-      "platforms": [
-        "Web"
-      ],
-      "tools": [
-        "Figma"
-      ],
+      "platforms": ["Web"],
+      "tools": ["Figma"],
       "deliverables": [
         "Desktop + mobile page designs",
         "Final production-ready comps"
@@ -305,8 +270,8 @@
         "caseStudy": null
       },
       "images": {
-        "thumb": "/img/projects/nicolai/thumb.jpg",
-        "hero": "/img/projects/nicolai/hero.jpg",
+        "thumb": "/images/projects/nicolai/thumb.jpg",
+        "hero": "/images/projects/nicolai/hero.jpg",
         "gallery": []
       },
       "tags": [
@@ -329,10 +294,7 @@
         "start": null,
         "end": null
       },
-      "role": [
-        "Visual Designer",
-        "UX Designer"
-      ],
+      "role": ["Visual Designer", "UX Designer"],
       "responsibilities": [
         "Competitive analysis",
         "Moodboarding + visual direction",
@@ -340,12 +302,8 @@
         "Tabbed navigation pattern",
         "Desktop + mobile delivery"
       ],
-      "platforms": [
-        "Web"
-      ],
-      "tools": [
-        "Figma"
-      ],
+      "platforms": ["Web"],
+      "tools": ["Figma"],
       "deliverables": [
         "Desktop + mobile page designs",
         "Navigation pattern",
@@ -356,8 +314,8 @@
         "caseStudy": null
       },
       "images": {
-        "thumb": "/img/projects/project-collective/thumb.jpg",
-        "hero": "/img/projects/project-collective/hero.jpg",
+        "thumb": "/images/projects/project-collective/thumb.jpg",
+        "hero": "/images/projects/project-collective/hero.jpg",
         "gallery": []
       },
       "tags": [
@@ -381,10 +339,7 @@
         "start": null,
         "end": null
       },
-      "role": [
-        "Visual Designer",
-        "Brand Designer"
-      ],
+      "role": ["Visual Designer", "Brand Designer"],
       "responsibilities": [
         "Imagery curation + pacing",
         "Hero video design (desktop + mobile)",
@@ -392,12 +347,8 @@
         "Late-stage image swaps",
         "Final asset slicing + handoff"
       ],
-      "platforms": [
-        "Web"
-      ],
-      "tools": [
-        "Figma"
-      ],
+      "platforms": ["Web"],
+      "tools": ["Figma"],
       "deliverables": [
         "Full lookbook design (desktop + mobile)",
         "Hero video comps",
@@ -413,8 +364,8 @@
         "caseStudy": null
       },
       "images": {
-        "thumb": "/img/projects/holiday-lookbook/thumb.jpg",
-        "hero": "/img/projects/holiday-lookbook/hero.jpg",
+        "thumb": "/images/projects/holiday-lookbook/thumb.jpg",
+        "hero": "/images/projects/holiday-lookbook/hero.jpg",
         "gallery": []
       },
       "tags": [
@@ -438,23 +389,15 @@
         "start": null,
         "end": null
       },
-      "role": [
-        "UX Designer",
-        "Product Designer"
-      ],
+      "role": ["UX Designer", "Product Designer"],
       "responsibilities": [
         "Mobile pagination design + engineering partnership",
         "Finish category overhaul (based on merchandising audit)",
         "Finish Guide modal design",
         "Desktop + mobile delivery"
       ],
-      "platforms": [
-        "Web",
-        "Mobile Web"
-      ],
-      "tools": [
-        "Figma"
-      ],
+      "platforms": ["Web", "Mobile Web"],
+      "tools": ["Figma"],
       "deliverables": [
         "Updated Finish Guide (desktop + mobile)",
         "Pagination pattern",
@@ -470,8 +413,8 @@
         "caseStudy": null
       },
       "images": {
-        "thumb": "/img/projects/finish-guide/thumb.jpg",
-        "hero": "/img/projects/finish-guide/hero.jpg",
+        "thumb": "/images/projects/finish-guide/thumb.jpg",
+        "hero": "/images/projects/finish-guide/hero.jpg",
         "gallery": []
       },
       "tags": [
@@ -495,22 +438,15 @@
         "start": null,
         "end": null
       },
-      "role": [
-        "Visual Designer",
-        "UX Designer"
-      ],
+      "role": ["Visual Designer", "UX Designer"],
       "responsibilities": [
         "Section library design (all sections)",
         "Layout + hierarchy refinement",
         "Multi-stakeholder feedback integration",
         "Desktop + mobile delivery"
       ],
-      "platforms": [
-        "Web"
-      ],
-      "tools": [
-        "Figma"
-      ],
+      "platforms": ["Web"],
+      "tools": ["Figma"],
       "deliverables": [
         "Full page design (desktop + mobile)",
         "Shared section library"
@@ -520,8 +456,8 @@
         "caseStudy": null
       },
       "images": {
-        "thumb": "/img/projects/b2b/thumb.jpg",
-        "hero": "/img/projects/b2b/hero.jpg",
+        "thumb": "/images/projects/b2b/thumb.jpg",
+        "hero": "/images/projects/b2b/hero.jpg",
         "gallery": []
       },
       "tags": [
@@ -545,22 +481,15 @@
         "start": null,
         "end": null
       },
-      "role": [
-        "Visual Designer",
-        "Brand Designer"
-      ],
+      "role": ["Visual Designer", "Brand Designer"],
       "responsibilities": [
         "Imagery curation + section pacing",
         "Hero video design (desktop + mobile)",
         "Copy integration + layout refinement",
         "Asset slicing + handoff"
       ],
-      "platforms": [
-        "Web"
-      ],
-      "tools": [
-        "Figma"
-      ],
+      "platforms": ["Web"],
+      "tools": ["Figma"],
       "deliverables": [
         "Full lookbook design (desktop + mobile)",
         "Hero video comps",
@@ -576,8 +505,8 @@
         "caseStudy": null
       },
       "images": {
-        "thumb": "/img/projects/nye-lookbook/thumb.jpg",
-        "hero": "/img/projects/nye-lookbook/hero.jpg",
+        "thumb": "/images/projects/nye-lookbook/thumb.jpg",
+        "hero": "/images/projects/nye-lookbook/hero.jpg",
         "gallery": []
       },
       "tags": [
@@ -601,22 +530,15 @@
         "start": null,
         "end": null
       },
-      "role": [
-        "Visual Designer",
-        "Brand Designer"
-      ],
+      "role": ["Visual Designer", "Brand Designer"],
       "responsibilities": [
         "Imagery curation + section pacing",
         "Hero video design (desktop + mobile)",
         "Copy integration + layout refinement",
         "Asset slicing + handoff"
       ],
-      "platforms": [
-        "Web"
-      ],
-      "tools": [
-        "Figma"
-      ],
+      "platforms": ["Web"],
+      "tools": ["Figma"],
       "deliverables": [
         "Full lookbook design (desktop + mobile)",
         "Hero video comps",
@@ -627,8 +549,8 @@
         "caseStudy": null
       },
       "images": {
-        "thumb": "/img/projects/spring-lookbook/thumb.jpg",
-        "hero": "/img/projects/spring-lookbook/hero.jpg",
+        "thumb": "/images/projects/spring-lookbook/thumb.jpg",
+        "hero": "/images/projects/spring-lookbook/hero.jpg",
         "gallery": []
       },
       "tags": [
@@ -652,22 +574,15 @@
         "start": null,
         "end": null
       },
-      "role": [
-        "Visual Designer",
-        "Brand Designer"
-      ],
+      "role": ["Visual Designer", "Brand Designer"],
       "responsibilities": [
         "Imagery curation + section pacing",
         "Hero video design (desktop + mobile)",
         "Copy integration + layout refinement",
         "Asset slicing + handoff"
       ],
-      "platforms": [
-        "Web"
-      ],
-      "tools": [
-        "Figma"
-      ],
+      "platforms": ["Web"],
+      "tools": ["Figma"],
       "deliverables": [
         "Full lookbook design (desktop + mobile)",
         "Hero video comps",
@@ -678,17 +593,11 @@
         "caseStudy": null
       },
       "images": {
-        "thumb": "/img/projects/outdoor-lookbook/thumb.jpg",
-        "hero": "/img/projects/outdoor-lookbook/hero.jpg",
+        "thumb": "/images/projects/outdoor-lookbook/thumb.jpg",
+        "hero": "/images/projects/outdoor-lookbook/hero.jpg",
         "gallery": []
       },
-      "tags": [
-        "Campaign",
-        "Editorial",
-        "Lookbook",
-        "Outdoor",
-        "Visual design"
-      ]
+      "tags": ["Campaign", "Editorial", "Lookbook", "Outdoor", "Visual design"]
     },
     {
       "id": "13",
@@ -703,22 +612,15 @@
         "start": null,
         "end": null
       },
-      "role": [
-        "UX Designer",
-        "Product Designer"
-      ],
+      "role": ["UX Designer", "Product Designer"],
       "responsibilities": [
         "Stools: adapted Kitchen Project Guide copy + illustrations into Stools PIP (desktop + mobile)",
         "Rug Guide: rebuilt component in Figma + applied content updates",
         "Tempaper: adapted PB reference into a 3\u00d71 step-by-step installation layout with custom removability callout",
         "Copy coordination + site ops QA across all three"
       ],
-      "platforms": [
-        "Web"
-      ],
-      "tools": [
-        "Figma"
-      ],
+      "platforms": ["Web"],
+      "tools": ["Figma"],
       "deliverables": [
         "Stools PIP content (desktop + mobile)",
         "Rug Guide component",
@@ -729,16 +631,11 @@
         "caseStudy": null
       },
       "images": {
-        "thumb": "/img/projects/pip-content/thumb.jpg",
-        "hero": "/img/projects/pip-content/hero.jpg",
+        "thumb": "/images/projects/pip-content/thumb.jpg",
+        "hero": "/images/projects/pip-content/hero.jpg",
         "gallery": []
       },
-      "tags": [
-        "PIP",
-        "Educational content",
-        "Content design",
-        "Multi-category"
-      ]
+      "tags": ["PIP", "Educational content", "Content design", "Multi-category"]
     },
     {
       "id": "14",
@@ -753,25 +650,15 @@
         "start": null,
         "end": null
       },
-      "role": [
-        "Visual Designer",
-        "Brand Designer"
-      ],
+      "role": ["Visual Designer", "Brand Designer"],
       "responsibilities": [
         "Site asset design",
         "Social asset design",
         "Email asset design",
         "Print asset design"
       ],
-      "platforms": [
-        "Web",
-        "Email",
-        "Print",
-        "Social"
-      ],
-      "tools": [
-        "Figma"
-      ],
+      "platforms": ["Web", "Email", "Print", "Social"],
+      "tools": ["Figma"],
       "deliverables": [
         "Site assets",
         "Social assets",
@@ -788,16 +675,11 @@
         "caseStudy": null
       },
       "images": {
-        "thumb": "/img/projects/benjamin-moore/thumb.jpg",
-        "hero": "/img/projects/benjamin-moore/hero.jpg",
+        "thumb": "/images/projects/benjamin-moore/thumb.jpg",
+        "hero": "/images/projects/benjamin-moore/hero.jpg",
         "gallery": []
       },
-      "tags": [
-        "Cross-brand",
-        "Campaign",
-        "Multi-surface",
-        "Brand design"
-      ]
+      "tags": ["Cross-brand", "Campaign", "Multi-surface", "Brand design"]
     },
     {
       "id": "15",
@@ -812,22 +694,15 @@
         "start": null,
         "end": null
       },
-      "role": [
-        "Designer",
-        "Content Strategist"
-      ],
+      "role": ["Designer", "Content Strategist"],
       "responsibilities": [
         "Naming conventions + asset handoff standards",
         "UI QA",
         "Large-scale content curation across multiple programs",
         "Evergreen, seasonal, and program-specific selections"
       ],
-      "platforms": [
-        "Web"
-      ],
-      "tools": [
-        "Figma"
-      ],
+      "platforms": ["Web"],
+      "tools": ["Figma"],
       "deliverables": [
         "Asset naming + handoff standards",
         "200+ evergreen assets",
@@ -844,16 +719,11 @@
         "caseStudy": null
       },
       "images": {
-        "thumb": "/img/projects/project-boards/thumb.jpg",
-        "hero": "/img/projects/project-boards/hero.jpg",
+        "thumb": "/images/projects/project-boards/thumb.jpg",
+        "hero": "/images/projects/project-boards/hero.jpg",
         "gallery": []
       },
-      "tags": [
-        "Content curation",
-        "Systems",
-        "Asset management",
-        "Scale"
-      ]
+      "tags": ["Content curation", "Systems", "Asset management", "Scale"]
     },
     {
       "id": "16",
@@ -868,22 +738,15 @@
         "start": null,
         "end": null
       },
-      "role": [
-        "UX Designer",
-        "Visual Designer"
-      ],
+      "role": ["UX Designer", "Visual Designer"],
       "responsibilities": [
         "Layout + hierarchy improvements",
         "Right rail design + contextual link integration",
         "Desktop + mobile delivery",
         "Multiple rounds of blog content production"
       ],
-      "platforms": [
-        "Web"
-      ],
-      "tools": [
-        "Figma"
-      ],
+      "platforms": ["Web"],
+      "tools": ["Figma"],
       "deliverables": [
         "Redesigned blog template (desktop + mobile)",
         "Right rail component",
@@ -894,8 +757,8 @@
         "caseStudy": null
       },
       "images": {
-        "thumb": "/img/projects/blog-redesign/thumb.jpg",
-        "hero": "/img/projects/blog-redesign/hero.jpg",
+        "thumb": "/images/projects/blog-redesign/thumb.jpg",
+        "hero": "/images/projects/blog-redesign/hero.jpg",
         "gallery": []
       },
       "tags": [
